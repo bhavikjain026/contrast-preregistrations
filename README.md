@@ -33,4 +33,4 @@ Each published file is byte-identical to the version committed at the listed com
 ## Releases
 
 `v1` — first publication (13 Oct 2026): two selection-policy files and the pilot pre-registration's hash.
- — adds the Lin et al. (2026) replication pre-registration (13 Oct 2026), before its analysis.
+`v2` — adds the Lin et al. (2026) replication pre-registration (13 Oct 2026), before its analysis.
