@@ -47,3 +47,15 @@ else "uses"** (the base-rate flag used for the tutor comparisons K1 / R-c).
 Dry run on synthetic people (known strategies on this design; stub model) and on Stengård data_12 (already used; base
 1% / 97% replaced by the grid's 10% / 90%; methods (a), (b), (d) only) → freeze the script and prompt SHA-256 → one GPU
 job (model replies for all 177 people; shown to the team lead before submitting) → one analysis run.
+
+## Addendum A1 (2026-10-13, before the GPU run; no method output on the Lin data existed)
+**Change:** one sentence is added to the frozen language-model prompt, just before the question: "Ignoring the base rate
+means the person's answers barely change between the two problems of each pair (problems 1-2, 3-4, 5-6 and 7-8), where
+only the base rate differs." Nothing else changes: same 8 problems and order, same question "Does this person ignore the
+base rate? Answer yes / no / not sure.", greedy decoding (temperature 0), at most 8 new tokens, same reply parsing, same
+measures and predictions.
+**Why (fairness):** the reference label and the other methods all use this operational definition of base-rate neglect
+(the answer does not move with the base rate); without it the model would be judged against a definition it was never
+given. The original version of this file (SHA-256 806d14f2724346c1fa65aa4a9d4a61bbb8951c2e52433371277c22b93436e507) was
+published as v3; this amended version replaces it for the run. The new prompt and script SHA-256 values are recorded in
+the project log and `logs/lin2026_eight_frozen.json` before the run.
