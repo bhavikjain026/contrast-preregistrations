@@ -18,6 +18,7 @@ no participant text, no code.
 | `prereg_trial_addendum_A1.md` (addendum to `prereg_trial.md`) | `analysis/prereg_trial_addendum_A1.md` @ `e54b65ee6d18126a3fe2f41412ae66c50a689e07` | 2026-10-14 18:54:45 +05:30 | `09c3956c7197ba2fbc55f559667f5d70e9746257a5c9cc71879507ff847ff4b0` |
 | *(not yet published)* volunteer pilot, visit 1 — original | `analysis/prereg_pilot_visit1.md` @ `3139e5350917cb55caa2d5459240fc71967c2e46` | 2026-10-13 15:11:39 +05:30 | `26292ca897eb39df42b74eb716888e4ffc0dc314cf4f0c7dcf7a94588f3d1538` |
 | *(not yet published)* volunteer pilot, visit 1 — with addendum A1 (current) | `analysis/prereg_pilot_visit1.md` @ `c14f3aa7d122db71b5e406254267018b03b0ed62` | 2026-10-13 20:21:02 +05:30 | `804a7d056aec00ef8d07a72d4a53f6b2edae40ca30e4be73b4fdd98d759d3181` |
+| *(not yet published)* volunteer pilot, visit 1 — amendment v8 (tie-break for the A1 figures) | `analysis/prereg_pilot_visit1_amendment_v8.md` @ `e472579429873ae14f5fb3c6f02b126861da7cc2` | 2026-10-14 19:28:04 +05:30 | `232b206972d85818be5e61f9f589598ff43899918f50e69c3f2ad1eee769eed5` |
 
 Each published file is byte-identical to the version committed at the listed commit. Check with
 `sha256sum <file>`.
@@ -56,6 +57,10 @@ Each published file is byte-identical to the version committed at the listed com
   who neglect the base rate would get the base-rate lesson, and how many lessons would be wasted — because a
   majority guess never assigns that lesson; the primary measures are unchanged. Its hash is listed above; the
   file (with the addendum) will be published after the pilot.
+  Amendment v8 (14 Oct 2026, before the visit-1 analysis was run, when the only rater codes were those for P01
+  from 12 Oct, already described in the pre-registration) fixes how the A1 figures are reported if the raters’
+  majority status is tied: under both tie-breaks, with the script’s default (‘uses’) labelled. Nothing else
+  changes. Its hash is listed above; the file will be published after the pilot.
 
 ## Releases
 
@@ -67,3 +72,4 @@ Each published file is byte-identical to the version committed at the listed com
 `v6` — adds the Pighin et al. (OSF p37nz) comparison plan (committed 12 Oct 2026), byte-identical to the added lines.
 `v7` — adds the randomised pilot pre-registration (13 Oct 2026), before any participant.
 `v7.1` — addendum A1 to the randomised pilot pre-registration (power low end corrected; 14 Oct 2026).
+`v8` — adds the hash of pilot amendment v8 (tie-break reporting for the A1 figures; 14 Oct 2026).
