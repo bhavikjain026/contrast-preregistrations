@@ -15,6 +15,7 @@ no participant text, no code.
 | `prereg_lin2026_eight_answers.md` — with addendum A1 (current; tag v4) | `analysis/prereg_lin2026_eight_answers.md` @ `8c8db73f8f368d119e11b4eaa3c079eaf24be024` | 2026-10-13 20:09:34 +05:30 | `d3c5f8d98eb0b9acc0dd0bae11fc3a6bd3d5bfd5da01654dedf221b6b375c4f3` |
 | `prereg_pighin_p37nz.md` | `results.md` lines 2180–2234, the lines added by commit `31918143afc81d54adca069ba1b074410909747e` (the plan section) | 2026-10-12 17:30:50 +05:30 | `f1a6f3028e2bd1ff644233c0b7912097e7b8679e387715166fe4fd146cde5314` |
 | `prereg_trial.md` | `analysis/prereg_trial.md` @ `36b4cd34a06b7b1830d8c120605f6101e652997e` | 2026-10-13 20:55:29 +05:30 | `2e19e77dd6eaeab3594b9d9fdb5a0285e0d03c3a40d121cabc62755cd06d0217` |
+| `prereg_trial_addendum_A1.md` (addendum to `prereg_trial.md`) | `analysis/prereg_trial_addendum_A1.md` @ `e54b65ee6d18126a3fe2f41412ae66c50a689e07` | 2026-10-14 18:54:45 +05:30 | `09c3956c7197ba2fbc55f559667f5d70e9746257a5c9cc71879507ff847ff4b0` |
 | *(not yet published)* volunteer pilot, visit 1 — original | `analysis/prereg_pilot_visit1.md` @ `3139e5350917cb55caa2d5459240fc71967c2e46` | 2026-10-13 15:11:39 +05:30 | `26292ca897eb39df42b74eb716888e4ffc0dc314cf4f0c7dcf7a94588f3d1538` |
 | *(not yet published)* volunteer pilot, visit 1 — with addendum A1 (current) | `analysis/prereg_pilot_visit1.md` @ `c14f3aa7d122db71b5e406254267018b03b0ed62` | 2026-10-13 20:21:02 +05:30 | `804a7d056aec00ef8d07a72d4a53f6b2edae40ca30e4be73b4fdd98d759d3181` |
 
@@ -44,6 +45,9 @@ Each published file is byte-identical to the version committed at the listed com
   starts only after Plaksha University ethics approval. Published here on 13 Oct 2026. Exact test items, the
   allocation-list hash, the frozen tutor tag and the ethics reference follow as dated addenda before the first
   participant.
+  Addendum A1 (14 Oct 2026, v7.1, before any participant) corrects the low end of the stated power range: 50% of
+  30 people is 7.5 per arm, where the minimum detectable d is about 1.37 (corrected range 0.89–1.37). Nothing
+  else changes.
 - **Volunteer pilot, visit 1.** Only its SHA-256 is published now. The file itself will be added after the pilot,
   byte-identical, so it can be checked against the hash above. It is withheld for now because it mentions one
   participant's already-known result. **This hash is published here before any pilot data from participants P02–P08
@@ -62,3 +66,4 @@ Each published file is byte-identical to the version committed at the listed com
 `v5` — adds the hash of the pilot pre-registration with addendum A1 (file still to follow after the pilot).
 `v6` — adds the Pighin et al. (OSF p37nz) comparison plan (committed 12 Oct 2026), byte-identical to the added lines.
 `v7` — adds the randomised pilot pre-registration (13 Oct 2026), before any participant.
+`v7.1` — addendum A1 to the randomised pilot pre-registration (power low end corrected; 14 Oct 2026).
