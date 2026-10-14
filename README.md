@@ -19,6 +19,7 @@ no participant text, no code.
 | *(not yet published)* volunteer pilot, visit 1 — original | `analysis/prereg_pilot_visit1.md` @ `3139e5350917cb55caa2d5459240fc71967c2e46` | 2026-10-13 15:11:39 +05:30 | `26292ca897eb39df42b74eb716888e4ffc0dc314cf4f0c7dcf7a94588f3d1538` |
 | *(not yet published)* volunteer pilot, visit 1 — with addendum A1 (current) | `analysis/prereg_pilot_visit1.md` @ `c14f3aa7d122db71b5e406254267018b03b0ed62` | 2026-10-13 20:21:02 +05:30 | `804a7d056aec00ef8d07a72d4a53f6b2edae40ca30e4be73b4fdd98d759d3181` |
 | *(not yet published)* volunteer pilot, visit 1 — amendment v8 (tie-break for the A1 figures) | `analysis/prereg_pilot_visit1_amendment_v8.md` @ `e472579429873ae14f5fb3c6f02b126861da7cc2` | 2026-10-14 19:28:04 +05:30 | `232b206972d85818be5e61f9f589598ff43899918f50e69c3f2ad1eee769eed5` |
+| *(not yet published)* randomised pilot — addendum A2 (addendum to `prereg_trial.md`) | `analysis/prereg_trial_addendum_A2.md` @ `d11c19f71012c702985607f8dba2c7bab5bc36a0` | 2026-10-14 22:06:27 +05:30 | `1502bb7fd0b621d600aba3ec48392fd14e5df83d582e043d3f48717b3ec943c1` |
 
 Each published file is byte-identical to the version committed at the listed commit. Check with
 `sha256sum <file>`.
@@ -49,6 +50,10 @@ Each published file is byte-identical to the version committed at the listed com
   Addendum A1 (14 Oct 2026, v7.1, before any participant) corrects the low end of the stated power range: 50% of
   30 people is 7.5 per arm, where the minimum detectable d is about 1.37 (corrected range 0.89–1.37). Nothing
   else changes.
+  Addendum A2 (14 Oct 2026, v9, before any participant) fixes choices v7 left open, found in a synthetic dry run of
+  the whole pipeline (frozen pretest and test forms, practice and tie rules, scoring, allocation custody). Only its
+  SHA-256 is published now; the full text will be published after the last delayed test, because it describes
+  the delayed-test problems.
 - **Volunteer pilot, visit 1.** Only its SHA-256 is published now. The file itself will be added after the pilot,
   byte-identical, so it can be checked against the hash above. It is withheld for now because it mentions one
   participant's already-known result. **This hash is published here before any pilot data from participants P02–P08
@@ -73,3 +78,4 @@ Each published file is byte-identical to the version committed at the listed com
 `v7` — adds the randomised pilot pre-registration (13 Oct 2026), before any participant.
 `v7.1` — addendum A1 to the randomised pilot pre-registration (power low end corrected; 14 Oct 2026).
 `v8` — adds the hash of pilot amendment v8 (tie-break reporting for the A1 figures; 14 Oct 2026).
+`v9` — adds the hash of addendum A2 to the randomised pilot pre-registration (14 Oct 2026; text after the last delayed test).
