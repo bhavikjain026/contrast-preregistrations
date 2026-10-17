@@ -67,6 +67,26 @@ Each published file is byte-identical to the version committed at the listed com
   majority status is tied: under both tie-breaks, with the script’s default (‘uses’) labelled. Nothing else
   changes. Its hash is listed above; the file will be published after the pilot.
 
+## Outcomes: label-stability replication on Lin et al. (2026) (`prereg_lin2026_replication.md`, v2)
+
+| Prediction (fixed before the run) | Result | Outcome |
+|---|---|---|
+| P1. Base-rate split-half κ ≥ 0.56, CI lower bound > 0.40 | κ 0.73 [0.66, 0.80] | **Held** |
+| P2. Test-retest κ (first vs second presentation) ≥ split-half κ, base-rate label | test-retest 0.63 [0.50, 0.75] < split-half 0.73 | **Not supported** |
+| P3. False-alarm κ < base-rate κ | split-half 0.37 [0.28, 0.44] vs 0.73; test-retest 0.35 vs 0.63 | **Held** |
+| P4. Method κ < base-rate κ | 0.65 [0.59, 0.71] vs 0.73; difference 0.08 | **Inconclusive** (direction as predicted; 95% CI −0.00 to 0.17 includes 0) |
+
+Note: only 5 of 27 problem triples separate all methods.
+
+177 people; 95% CIs from 1,000 resamples of people. Reported whatever they showed; the hit-rate label was exploratory
+and is not a prediction.
+
+## Embargoed texts
+
+Some pre-registrations are published here as SHA-256 hashes only because their text contains study details that must
+stay private until that study ends. Each file will be added byte-identical when its study is done (pilot visit 1: after
+the 28 Oct analysis; trial addendum A2: after the last delayed test), so anyone can check it against its hash.
+
 ## Releases
 
 `v1` — first publication (13 Oct 2026): two selection-policy files and the pilot pre-registration's hash.
