@@ -17,6 +17,7 @@ no participant text, no code.
 | `prereg_trial.md` | `analysis/prereg_trial.md` @ `36b4cd34a06b7b1830d8c120605f6101e652997e` | 2026-10-13 20:55:29 +05:30 | `2e19e77dd6eaeab3594b9d9fdb5a0285e0d03c3a40d121cabc62755cd06d0217` |
 | `prereg_trial_addendum_A1.md` (addendum to `prereg_trial.md`) | `analysis/prereg_trial_addendum_A1.md` @ `e54b65ee6d18126a3fe2f41412ae66c50a689e07` | 2026-10-14 18:54:45 +05:30 | `09c3956c7197ba2fbc55f559667f5d70e9746257a5c9cc71879507ff847ff4b0` |
 | `prereg_lin_mixture.md` (tag v10) | `analysis/prereg_lin_mixture_DRAFT.md` @ `890caf849b578f9d86f1032be98a2f5d669307ba` | 2026-11-17 00:51:49 +05:30 | `05ef4c946081ce2827751f467858fc72113d538735ec2906ecc7e7b30aa88f31` |
+| `prereg_contrast_lite_stage1.md` (tag v12) | `contrast_lite/prereg_contrast_lite_DRAFT.md` @ `ff8ec3d7061862cd76daad52f5269fbc2b8c94a2` | 2026-11-17 04:24:44 +05:30 | `e9a5ad2cf32147aef09d24e462706ecf8c8d2a8258f88c9ba407cf09c4ee958c` |
 | *(not yet published)* volunteer pilot, visit 1 — original | `analysis/prereg_pilot_visit1.md` @ `3139e5350917cb55caa2d5459240fc71967c2e46` | 2026-10-13 15:11:39 +05:30 | `26292ca897eb39df42b74eb716888e4ffc0dc314cf4f0c7dcf7a94588f3d1538` |
 | *(not yet published)* volunteer pilot, visit 1 — with addendum A1 (current) | `analysis/prereg_pilot_visit1.md` @ `c14f3aa7d122db71b5e406254267018b03b0ed62` | 2026-10-13 20:21:02 +05:30 | `804a7d056aec00ef8d07a72d4a53f6b2edae40ca30e4be73b4fdd98d759d3181` |
 | *(not yet published)* volunteer pilot, visit 1 — amendment v8 (tie-break for the A1 figures) | `analysis/prereg_pilot_visit1_amendment_v8.md` @ `e472579429873ae14f5fb3c6f02b126861da7cc2` | 2026-10-14 19:28:04 +05:30 | `232b206972d85818be5e61f9f589598ff43899918f50e69c3f2ad1eee769eed5` |
@@ -61,6 +62,11 @@ Each published file is byte-identical to the version committed at the listed com
   file size, line count and header line had been read. The file lists the SHA-256 hashes of the analysis code, fixed
   before publication, and the fingerprints of the data files. As above, this repository proves the file has not
   changed since publication here. (The private file kept its drafting name.)
+- **Contrast-Lite v2, stage 1, on Stengård et al. (2022) (v12).** A small exploratory check on development data,
+  committed privately and published here on 17 Nov 2026, before any Stengård answer was read for it and before the
+  rule was run on real data. It has no success criterion and cannot test the kit's method labels. The file lists the
+  SHA-256 hashes of the kit and the analysis code. As above, this repository proves the file has not changed since
+  publication here. (The private file kept its drafting name.)
 - **Volunteer pilot, visit 1.** Only its SHA-256 is published now. The file itself will be added after the pilot,
   byte-identical, so it can be checked against the hash above. It is withheld for now because it mentions one
   participant's already-known result. **This hash is published here before any pilot data from participants P02–P08
