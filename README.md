@@ -23,6 +23,7 @@ no participant text, no code.
 | `prereg_ai_tutor_audit.md` (tag v14) | `analysis/prereg_ai_tutor_audit_DRAFT.md` @ `f4aa61f4f6130a21a9ef4f610514d689392eb7d9` | 2026-11-18 01:55:12 +05:30 | `7560c097b559ce9ccbf86562ebd675ca341ee6265a703a679fe089c7ea6d152c` |
 | `prereg_next_answer.md` (tag v15) | `analysis/prereg_next_answer.md` @ `24b5632404f3a1114d92e1d1e32408c0bba991d1` | 2026-11-18 17:06:42 +05:30 | `0be6e73ef600776612c9d7073dbe4f10c648e12d34f6ab90b2e311dba6a7fa31` |
 | `prereg_ai_tutor_audit_addendum1.md` (addendum to `prereg_ai_tutor_audit.md`; tag v14.1) | from the lead's private working files (not public: they also hold the coding key and product replies) | 2026-11-19 01:20:59 +05:30 | `c0750efb7023b74a22f593469725088fa0113adfec7b9d46fe04afa82779ab3e` |
+| `prereg_noise_sim_v16.md` (tag v16) | no private commit cited (simulation plan; the file lists the SHA-256 of its scripts and of the frozen tutor files it runs) | 2026-11-19 (written) | `919b7cef8cd58d0d425d5e319a79e689bb5faa316ae17b695dc31969c63de846` |
 | *(not yet published)* volunteer pilot, visit 1 — original | `analysis/prereg_pilot_visit1.md` @ `3139e5350917cb55caa2d5459240fc71967c2e46` | 2026-10-13 15:11:39 +05:30 | `26292ca897eb39df42b74eb716888e4ffc0dc314cf4f0c7dcf7a94588f3d1538` |
 | *(not yet published)* volunteer pilot, visit 1 — with addendum A1 (current) | `analysis/prereg_pilot_visit1.md` @ `c14f3aa7d122db71b5e406254267018b03b0ed62` | 2026-10-13 20:21:02 +05:30 | `804a7d056aec00ef8d07a72d4a53f6b2edae40ca30e4be73b4fdd98d759d3181` |
 | *(not yet published)* volunteer pilot, visit 1 — amendment v8 (tie-break for the A1 figures) | `analysis/prereg_pilot_visit1_amendment_v8.md` @ `e472579429873ae14f5fb3c6f02b126861da7cc2` | 2026-10-14 19:28:04 +05:30 | `232b206972d85818be5e61f9f589598ff43899918f50e69c3f2ad1eee769eed5` |
@@ -97,6 +98,10 @@ Each published file is byte-identical to the version committed at the listed com
   the results. No reply text is included. Unlike the other rows, no source commit is listed: the private branch that
   holds this file also holds the coding key and product replies, so it cannot be made public. The SHA-256 above and
   this repository's history show that the file has not changed since publication here.
+- **Noise simulation on the frozen tutor (v16).** A simulation plan, published here on 19 Nov 2026 before the
+  simulation is run: how often the tutor names the wrong rule when simulated learners' answers are a few points
+  off. No human data is read, used or produced. No source commit is listed; the file gives the SHA-256 of its
+  scripts and of the frozen tutor files it runs, so the run can be checked against it.
 - **Volunteer pilot, visit 1.** Only its SHA-256 is published now. The file itself will be added after the pilot,
   byte-identical, so it can be checked against the hash above. It is withheld for now because it mentions one
   participant's already-known result. **This hash is published here before any pilot data from participants P02–P08
