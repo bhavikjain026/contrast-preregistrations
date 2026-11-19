@@ -1,0 +1,46 @@
+You are session C for plan v23 (published at https://github.com/bhavikjain026/contrast-preregistrations/tree/v23). Your only job is step 1 of section 5: splitting each saved chatbot reply into problem text (stems), answer text (keys) and everything else (log). The plan's text for this step is in step1_v23.md in this folder. Read it first.
+
+GROUND RULES
+- Work only inside this folder (~/v23_C). Do not open, list or search anything outside it: not the tutor repo, not ~/v23_A or ~/v23_B, not the web.
+- Do not extract, convert, round or check any number. Do not compute anything about the problems. Do not say whether any problem or answer is right, wrong, easy or ambiguous, in files or in chat.
+- Do not edit the reply files. Do not install anything. Do not use git.
+- At the end, list every file you read and every file you wrote.
+
+INPUT
+replies/ holds one saved reply per chat that ran. The file name gives the group: ChatGPT_arm1_attempt1.txt is group ChatGPT_arm1 (ignore the attempt number).
+
+OUTPUT
+For each reply, write split/<group>.jsonl (for example split/ChatGPT_arm1.jsonl), with one JSON object per line:
+  {"line": n, "part": i, "dest": "stem" | "key" | "log", "id": "7#1" or null, "q": true or false, "text": "..."}
+- line: the 1-based line number in the reply, splitting the file on "\n" and dropping a trailing "\r".
+- part: 1 for a whole line. If one line holds text for two places (for example a question and its answer on the same line), cut it into consecutive pieces with parts 1, 2, ... The pieces, joined in part order, must rebuild the line exactly, including spaces and punctuation.
+- dest: stem, key or log (see the rules below).
+- id: the occurrence ID for stem and key pieces, and null for log pieces.
+- q: true on exactly one stem piece per occurrence, the piece that ends with its question sentence. Otherwise false.
+- text: the exact text of the piece.
+Every non-blank line must be covered exactly once. Blank lines need no pieces. You may write a small helper script in ~/v23_C/tools/ to produce the files, as long as the output pieces copy the reply text exactly.
+
+RULES FOR OCCURRENCES AND IDS
+- An occurrence is one problem as posed in the reply. Its label is the problem number as the reply writes it: "7.", "7)", "Problem 7", "**Problem 7:**" and "### 7" all have label 7. A sub-part such as 7(a) has label 7a. A problem with no number has the label nolabel.
+- The ID is <label>#<n>, where n counts that label's occurrences in order of appearance: 7#1 for the first problem labelled 7, then 7#2 if the label appears again as a new problem.
+- Answers given in a separate section (for example "Answers: 1. 26.9% 2. ...") are key text for the problem with the same label, namely the latest occurrence of that label that appears before them. They are not new occurrences.
+
+RULES FOR STEM, KEY AND LOG
+- stem: the occurrence's text from its start (including its label and any title) up to and including its question sentence. The question sentence is the last sentence of the problem statement that asks a question. That is usually the sentence ending in "?", or an instruction such as "Find ...", "Calculate ..." or "Determine ...". Keep every number that appears before it.
+- key: everything after the question sentence that belongs to the occurrence, up to the start of the next occurrence or of log text. That includes working, hints, answers, units, notes and instructions about the answer. Text after the question sentence goes to the key even if it states a rate. Do not move it into the stem.
+- log: anything that belongs to no occurrence, such as preamble, headings for the whole list, separators, closing text and offers of more help.
+- The q piece must be the last stem piece of its occurrence.
+
+THE CHECK
+Bhavik will run split_build.py on your files. It checks that:
+- every non-blank line is rebuilt exactly once;
+- the IDs are well formed and numbered in order;
+- each occurrence has exactly one q piece, and it is the last stem piece;
+- after the last "?" of the q piece there is no "answer", "=", "≈" or "%";
+- a q piece without "?" contains no "answer", "=" or "≈" and does not end with "%".
+If it reports a failure, Bhavik will paste the failure lines to you. Fix only what they name, rewrite that group's file, and say what you changed.
+
+When you finish, report:
+1. each group and its number of occurrences;
+2. any line you were unsure how to assign, with its line number and the choice you made. Quote at most the first six words of the line, with no numbers;
+3. the files you read and wrote.

@@ -1,0 +1,25 @@
+Step 4 of section 5 (keys), for session A. stems_final.csv is now locked and hashed, so you may open the answer text. This folder now also holds keys/<chatbot>_arm<k>.txt. The same ground rules apply: work only in this folder, compute no Bayes value, collision or error, judge nothing, round nothing.
+
+OUTPUT: keys_A.csv, written with a CSV library
+Header, exactly:  chatbot,arm,slot,key_status,key,note
+- One row for every slot 1 to 20 of every key file: 20 rows per file.
+- For slot n, read only the block "=== n#1 ===" in the key file. If there is no such block, key_status is none.
+- Which answer counts: the last answer explicitly marked final, or else the last numeric answer in the block.
+- If the same number is given in several forms (for example 9/59 ≈ 15.25%), use the most precise form. Forms agree if each shown form equals the most precise form rounded to the digits shown. If two forms disagree by more than that, key_status is unresolved.
+- key_status is one of:
+  - scored: a single numeric answer;
+  - range: the answer is a range, for example "between 10% and 15%";
+  - nonnumeric: the answer is words only;
+  - none: no answer, or no block;
+  - unresolved: forms that disagree, as above.
+- key is filled only when scored, and is empty otherwise. Write it as an exact decimal or an exact fraction, with no % sign, no spaces and no scientific notation. A key outside 0 to 100 is written as given.
+- note: optional. Quote the words your choice rests on when it was not obvious.
+
+CONVERSION RULES (from plan section 5; the last bullet states our reading, fixed before generation)
+- A percentage is taken as written.
+- A bare decimal in [0, 1] is ×100: 0.1525 gives 15.25.
+- A bare fraction without a percent sign is a probability, ×100: 9/59 gives 900/59.
+- A leading "≈", "about", "approximately" or "roughly" is ignored, and the number is used.
+- Our reading (fixed before generation): a bare number greater than 1 with no % sign is taken as a percentage.
+
+When you finish, report the counts of each key_status per file and the files you read and wrote. Report no values in chat.

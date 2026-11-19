@@ -1,0 +1,51 @@
+You are session A for plan v23 (published at https://github.com/bhavikjain026/contrast-preregistrations/tree/v23). Another session extracts the same numbers independently; you will never see its work, and it will never see yours. Where you two disagree, the slot is excluded automatically, so do not guess what anyone else would write. Apply the rules exactly.
+
+Your job is step 2 of section 5: read the stem files and write the base rate b, hit rate h and false-alarm rate f for each slot. The plan's section 5 is in section5_v23.md in this folder. Read it first.
+
+GROUND RULES
+- Work only inside this folder (~/v23_A). Do not open, list or search anything outside it: not the tutor repo, not ~/v23_C, not ~/v23_B, not the web.
+- Only stems/ and section5_v23.md are yours for now. If any key file or answer text is in the folder, do not open it. Tell Bhavik and stop.
+- Do not compute any Bayes answer, posterior, wrong-rule value or collision, and do not say anything about how good the problems are. You only transcribe and convert the three input numbers.
+- Do not round anything. Do not install anything. Do not use git.
+- At the end, list every file you read and every file you wrote.
+
+INPUT
+stems/<chatbot>_arm<k>.txt, one per chat that ran. Each holds blocks headed "=== <id> ===", where <id> is an occurrence ID such as 7#1.
+
+OUTPUT: stems_A.csv, written with a CSV library so that quoting is correct
+Header, exactly:  chatbot,arm,slot,status,b,h,f,note
+- One row for every slot 1 to 20 of every stem file: 20 rows per file. chatbot is ChatGPT, Gemini or Claude, and arm is 1 or 2, both taken from the file name.
+- The slot for label n is occurrence n#1. Ignore every other occurrence, such as 7#2, 21#1 or 3a#1.
+- status is one of:
+  - missing: there is no block "=== n#1 ===" in the file. This is the only case for missing.
+  - included: all three numbers were found and converted under the rules below.
+  - excluded:<reason>, with reason exactly one of:
+    - missing_number: b, h or f is not stated;
+    - unconvertible: a number that cannot be converted under the rules;
+    - more_than_two_hypotheses;
+    - more_than_one_result: more than one test result;
+    - sequential_tests;
+    - other_question: the question asks for something other than P(condition | positive);
+    - inconsistent: the numbers contradict each other;
+    - out_of_range: a converted b, h or f is not strictly between 0 and 100;
+    - derived: a number would need any derivation other than the one allowed subtraction below;
+    - overall_accuracy: only an "overall accuracy" is given, without conditional rates.
+  If several reasons apply, use the first in this list.
+- b, h and f are filled only when the status is included, and are empty otherwise. Write each value as an exact decimal (2.5) or an exact fraction (100/2500000), with no % sign, no spaces and no scientific notation.
+- note: for an exclusion, quote the sentence it rests on. For the allowed subtraction, write "subtraction: <what>". Otherwise leave it empty.
+
+CONVERSION RULES (from plan section 5; the last two bullets state how we read cases the plan leaves open, fixed before generation)
+- A percentage is taken as written: 2.5% gives 2.5.
+- A bare decimal in [0, 1] is a probability, multiplied by 100, unless the text says percent: 0.025 gives 2.5, and 1 gives 100.
+- "1 in N" and "k of N" (also "k out of N") are stored as exact fractions of 100: 1 in 2,500,000 gives 100/2500000, and 8 of 10 gives 800/10. Do not simplify or compute decimals.
+- With counts (natural frequencies), each rate is a "k of N": b = ill of total, h = positive ill of ill, f = positive healthy of healthy. The number of healthy people may be found by one subtraction of stated counts (healthy = total − ill); log it in note. Any other derived number gives excluded:derived.
+- Specificity or a true-negative rate of s gives f = 100 − s. A miss or false-negative rate of m gives h = 100 − m. A false-positive rate is f as stated. A detection rate or sensitivity is h as stated. Write 100 − s exactly, for example 100 − 95.5 = 4.5.
+- An overall accuracy without conditional rates gives excluded:overall_accuracy. A test called "95% accurate" with no other rates counts as an overall accuracy.
+- Nothing is rounded.
+- Our reading (fixed before generation): a bare number greater than 1 with no % sign, in a rate's place, is taken as a percentage.
+- Our reading (fixed before generation): standard English number words are converted ("one in a thousand" gives 100/1000). Anything you are unsure how to convert gives excluded:unconvertible.
+
+When you finish, report:
+1. for each file, how many slots were included, missing and excluded, by reason;
+2. the files you read and wrote.
+Do not report any extracted values in chat. Then stop and wait. Bhavik will give you step 4 later, in this same session.
