@@ -1,0 +1,101 @@
+# v25 inputs verified: data/realdata/woike/Study4a.xlsx 0376fcfb346b277f320a6ffe3a82a781c56fe9764b05d1710e29bf873ebb0811; src/realdata_woike.py 4874dd3dc4dce7205584a234829809ca5550633880495ff7573b6d2c94bc4402; src/census.py 20712f082c7e2bc1f6c8fde6c900da2b08c9bf2d4e6f33130bc4bdf72bb6b059; src/bayes_strategies.py 4d43af92ecb0e3bf8f74be1a213340010d92372762337f22a425817c3ac6b96e
+== comparison with plan section 3 (October values), primary window; the run's values are used throughout
+   size of F: run 47; section 3 47; AGREES
+   size of N: run 498; section 3 498; AGREES
+   whole file, matched Bayes on task 402: run 13; section 3 13; AGREES
+   whole file, matched Bayes on task 502: run 11; section 3 11; AGREES
+   whole file, matched 90 on 402 + 60 on 501 + 50 on 502: run 146; section 3 146; AGREES
+   ceiling on count 3 (the smaller whole-file Bayes count): 11
+== window 1.0 + 10^-7 points (primary)
+   group sizes: F 47 of 545; N 498 of 545
+   group F (matched 75 on task 504):
+      count 1: matched 90 on task 402: 1 of 47 (2.1%)
+      count 2: matched 90 on task 402 and 60 on task 501 (S = 2): 1 of 47 (2.1%)
+      count 3: matched Bayes on tasks 402 and 502 (D = 2): 7 of 47 (14.9%)
+      reference a: matched 60 on task 402: 0 of 47 (0.0%)
+      reference b: matched 70 on task 402: 0 of 47 (0.0%)
+      reference c: matched 80 on task 402: 1 of 47 (2.1%)
+      single target: matched 60 on task 501: 10 of 47 (21.3%)
+      single target: matched Bayes (300/7) on task 402: 11 of 47 (23.4%)
+      single target: matched Bayes (1900/109) on task 502: 9 of 47 (19.1%)
+      gave the same answer four times: 0 of 47 (0.0%)
+      S-by-D table, rows S = 0, 1, 2; columns D = 0, 1, 2; then row totals:
+         S = 0: 24 | 6 | 7 | total 37
+         S = 1: 9 | 0 | 0 | total 9
+         S = 2: 1 | 0 | 0 (impossible by definition) | total 1
+         column totals: 34 | 6 | 7 | total 47
+   group N (everyone else; context only):
+      count 1: matched 90 on task 402: 4 of 498 (0.8%)
+      count 2: matched 90 on task 402 and 60 on task 501 (S = 2): 1 of 498 (0.2%)
+      count 3: matched Bayes on tasks 402 and 502 (D = 2): 1 of 498 (0.2%)
+      reference a: matched 60 on task 402: 14 of 498 (2.8%)
+      reference b: matched 70 on task 402: 2 of 498 (0.4%)
+      reference c: matched 80 on task 402: 3 of 498 (0.6%)
+      single target: matched 60 on task 501: 74 of 498 (14.9%)
+      single target: matched Bayes (300/7) on task 402: 2 of 498 (0.4%)
+      single target: matched Bayes (1900/109) on task 502: 2 of 498 (0.4%)
+      gave the same answer four times: 3 of 498 (0.6%)
+      S-by-D table, rows S = 0, 1, 2; columns D = 0, 1, 2; then row totals:
+         S = 0: 418 | 2 | 1 | total 421
+         S = 1: 76 | 0 | 0 | total 76
+         S = 2: 1 | 0 | 0 (impossible by definition) | total 1
+         column totals: 495 | 2 | 1 | total 498
+   whole file (F and N together):
+      count 1: matched 90 on task 402: 5 of 545 (0.9%)
+      count 2: matched 90 on task 402 and 60 on task 501 (S = 2): 2 of 545 (0.4%)
+      count 3: matched Bayes on tasks 402 and 502 (D = 2): 8 of 545 (1.5%)
+      reference a: matched 60 on task 402: 14 of 545 (2.6%)
+      reference b: matched 70 on task 402: 2 of 545 (0.4%)
+      reference c: matched 80 on task 402: 4 of 545 (0.7%)
+      single target: matched 60 on task 501: 84 of 545 (15.4%)
+      single target: matched Bayes (300/7) on task 402: 13 of 545 (2.4%)
+      single target: matched Bayes (1900/109) on task 502: 11 of 545 (2.0%)
+      gave the same answer four times: 3 of 545 (0.6%)
+== window 0.1 + 10^-7 points (secondary check: counts only)
+   group sizes: F 47 of 545; N 498 of 545
+   group F (matched 75 on task 504):
+      count 1: matched 90 on task 402: 1 of 47
+      count 2: matched 90 on task 402 and 60 on task 501 (S = 2): 1 of 47
+      count 3: matched Bayes on tasks 402 and 502 (D = 2): 0 of 47
+      reference a: matched 60 on task 402: 0 of 47
+      reference b: matched 70 on task 402: 0 of 47
+      reference c: matched 80 on task 402: 1 of 47
+      single target: matched 60 on task 501: 10 of 47
+      single target: matched Bayes (300/7) on task 402: 0 of 47
+      single target: matched Bayes (1900/109) on task 502: 0 of 47
+      gave the same answer four times: 0 of 47
+      S-by-D table, rows S = 0, 1, 2; columns D = 0, 1, 2; then row totals:
+         S = 0: 37 | 0 | 0 | total 37
+         S = 1: 9 | 0 | 0 | total 9
+         S = 2: 1 | 0 | 0 (impossible by definition) | total 1
+         column totals: 47 | 0 | 0 | total 47
+   group N (everyone else; context only):
+      count 1: matched 90 on task 402: 4 of 498
+      count 2: matched 90 on task 402 and 60 on task 501 (S = 2): 1 of 498
+      count 3: matched Bayes on tasks 402 and 502 (D = 2): 0 of 498
+      reference a: matched 60 on task 402: 14 of 498
+      reference b: matched 70 on task 402: 2 of 498
+      reference c: matched 80 on task 402: 3 of 498
+      single target: matched 60 on task 501: 74 of 498
+      single target: matched Bayes (300/7) on task 402: 0 of 498
+      single target: matched Bayes (1900/109) on task 502: 0 of 498
+      gave the same answer four times: 3 of 498
+      S-by-D table, rows S = 0, 1, 2; columns D = 0, 1, 2; then row totals:
+         S = 0: 421 | 0 | 0 | total 421
+         S = 1: 76 | 0 | 0 | total 76
+         S = 2: 1 | 0 | 0 (impossible by definition) | total 1
+         column totals: 498 | 0 | 0 | total 498
+   whole file (F and N together):
+      count 1: matched 90 on task 402: 5 of 545
+      count 2: matched 90 on task 402 and 60 on task 501 (S = 2): 2 of 545
+      count 3: matched Bayes on tasks 402 and 502 (D = 2): 0 of 545
+      reference a: matched 60 on task 402: 14 of 545
+      reference b: matched 70 on task 402: 2 of 545
+      reference c: matched 80 on task 402: 4 of 545
+      single target: matched 60 on task 501: 84 of 545
+      single target: matched Bayes (300/7) on task 402: 0 of 545
+      single target: matched Bayes (1900/109) on task 502: 0 of 545
+      gave the same answer four times: 3 of 545
+== answers that are whole numbers of percent (within 10^-7 points), per task: task 402: 545 of 545; task 501: 545 of 545; task 502: 545 of 545; task 504: 545 of 545
+Counts describe answers, not the methods behind them. One study, four tasks, no feedback. No interval, test or comparison is computed.
+# environment: python 3.10.12; numpy 2.2.6; scipy 1.15.3 (numpy and scipy are imported by the loader's module and are not used in any count)
