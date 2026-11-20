@@ -1,0 +1,39 @@
+Plan v22 - smallest one-number fix for each published number set of plan v20 - ARITHMETIC ONLY, NO LEARNERS
+items file SHA-256 5f337517afcb5e94a3639b9c65d6b492642a34937ec9628f695b32559fdd1236; 54 standard rows; 23 unique number sets
+
+Every number set: b / h / f (points), collisions, smallest fixes
+  0.005 / 80 / 0.05 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement'), ('hit_rate', 'likelihood_subtraction')]; NO single-number fix within 40 points
+  0.024 / 15 / 12 [S1]: passes ['base_rate_only', 'joint_occurrence']; pairs [('base_rate_only', 'joint_occurrence')]; fixes: base rate 0.024 -> 5.024 (5 pt; correct answer 0.03 -> 6.20)
+  0.2 / 99 / 2 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement'), ('equal_priors', 'hit_rate'), ('equal_priors', 'likelihood_subtraction'), ('false_alarm_complement', 'hit_rate'), ('false_alarm_complement', 'likelihood_subtraction')]; NO single-number fix within 40 points
+  0.21 / 47.619 / 0.5 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement'), ('hit_rate', 'likelihood_subtraction')]; NO single-number fix within 40 points
+  0.5 / 40 / 0.01 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement'), ('hit_rate', 'likelihood_subtraction')]; NO single-number fix within 40 points
+  1 / 50 / 10 [S2]: passes -; pairs [('base_rate_only', 'joint_occurrence')]; fixes: base rate 1 -> 4 (3 pt; correct answer 4.81 -> 17.24)
+  1 / 55 / 5 [S4]: passes -; pairs [('base_rate_only', 'joint_occurrence')]; fixes: base rate 1 -> 4 (3 pt; correct answer 10.00 -> 31.43)
+  1 / 55 / 5.051 [S1,S4]: passes -; pairs [('base_rate_only', 'joint_occurrence')]; fixes: base rate 1 -> 4 (3 pt; correct answer 9.91 -> 31.21)
+  1 / 80 / 9.596 [S1,S5]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement')]; NO single-number fix within 40 points
+  1 / 80 / 9.6 [S1,S3,S5]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement')]; NO single-number fix within 40 points
+  1 / 80 / 9.69 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement')]; NO single-number fix within 40 points
+  1 / 80 / 10 [S2]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement')]; NO single-number fix within 40 points
+  2 / 95 / 0.51 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence'), ('equal_priors', 'false_alarm_complement'), ('hit_rate', 'likelihood_subtraction')]; NO single-number fix within 40 points
+  3 / 90 / 40 [S1]: passes -; pairs [('base_rate_only', 'joint_occurrence')]; fixes: base rate 3 -> 16 (13 pt; correct answer 6.51 -> 30.00)
+  5 / 0.4 / 2.105 [S1]: passes ['hit_rate', 'joint_occurrence']; pairs [('hit_rate', 'joint_occurrence')]; fixes: hit rate 0.4 -> 9.4 (9 pt; correct answer 0.99 -> 19.03)
+  5 / 40 / 20 [S1]: no collision, nothing to fix
+  10 / 60 / 20 [S6]: no collision, nothing to fix
+  10 / 80 / 10 [S2,S3,S6]: passes -; pairs [('equal_priors', 'false_alarm_complement')]; fixes: hit rate 80 -> 76 (4 pt; correct answer 47.06 -> 45.78); false-alarm rate 10 -> 27 (17 pt; correct answer 47.06 -> 24.77)
+  15 / 80 / 20 [S1,S2]: passes -; pairs [('equal_priors', 'false_alarm_complement'), ('equal_priors', 'hit_rate'), ('false_alarm_complement', 'hit_rate')]; fixes: hit rate 80 -> 73 (7 pt; correct answer 41.38 -> 39.18); false-alarm rate 20 -> 27 (7 pt; correct answer 41.38 -> 34.33)
+  25 / 80 / 40 [S5]: passes ['likelihood_subtraction']; pairs []; fixes: base rate 25 -> 24 (1 pt; correct answer 40.00 -> 38.71); hit rate 80 -> 78 (2 pt; correct answer 40.00 -> 39.39); false-alarm rate 40 -> 37 (3 pt; correct answer 40.00 -> 41.88)
+  30 / 70 / 50 [S1]: passes -; pairs [('joint_occurrence', 'likelihood_subtraction')]; fixes: base rate 30 -> 31 (1 pt; correct answer 37.50 -> 38.61); hit rate 70 -> 69 (1 pt; correct answer 37.50 -> 37.16); false-alarm rate 50 -> 51 (1 pt; correct answer 37.50 -> 37.04)
+  36 / 75 / 20 [S1]: passes -; pairs [('equal_priors', 'false_alarm_complement')]; fixes: hit rate 75 -> 73 (2 pt; correct answer 67.84 -> 67.25); false-alarm rate 20 -> 16 (4 pt; correct answer 67.84 -> 72.50)
+  80 / 75 / 25 [S1]: passes -; pairs [('equal_priors', 'false_alarm_complement'), ('equal_priors', 'hit_rate'), ('false_alarm_complement', 'hit_rate')]; fixes: hit rate 75 -> 69 (6 pt; correct answer 92.31 -> 91.69); false-alarm rate 25 -> 31 (6 pt; correct answer 92.31 -> 90.63)
+
+SUMMARY: 23 number sets; 2 with no collision; 21 with a collision
+  fixable by changing one number: 12 of 21; not fixable that way within 40 points: 9
+  smallest fix of at most  1 point(s): 2 of 21
+  smallest fix of at most  2 point(s): 3 of 21
+  smallest fix of at most  3 point(s): 6 of 21
+  smallest fix of at most  5 point(s): 8 of 21
+  smallest fix of at most 10 point(s): 11 of 21
+  smallest fix of at most 20 point(s): 12 of 21
+  smallest fix of at most 40 point(s): 12 of 21
+  smallest fix, median 3.5 points, largest 13 points
+  which number gives a smallest fix (ties counted for each): {'base rate': 7, 'hit rate': 6, 'false-alarm rate': 3}
