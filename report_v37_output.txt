@@ -1,0 +1,63 @@
+# plan v37 run, started 2026-11-22T10:03:02Z (UTC)
+# code: v37_hover.py ab1312aa01298ab8e252ce3953813dd5cb0b874f35769067ad6c568e7cd54e92; v37_adapter.py 1536f0ca94e697a9540cbe243e4b24de66de81eef02a2e0abe783aee174a7835; v37_run.py 94253d4c1041a75cee01b0654297ac0b1f7f844869843fc455060caee523f6b2
+# data: scanDF2.csv 666ae25fa17caf10b662cd46baf08ce9de97d3b87bbc3102f5df6ac25c403220; analysis_scanpath.csv c58785d07ae382d9689ab789b9e9fbc90b5f6581bc5e5f78a3c9c612624a198f; analysis_duration.csv f635586aac58790c2b88e8e9f0c2d44754b86ad7b599f36ace81644303e3d115; w2_prob_aitor.csv 561d8f2b3c0c0b9e348421239a0b668f9967101470c40353cfdec6924121431d
+## SAMPLE 1: the authors' final analysis set (scanDF2.csv). Its near_50 row at 'any recorded hover' is the primary result; every other row in this printout is secondary
+  people_in_final_file: 94; final_people_not_in_cleaned_file: 0; people_in_sample: 94; people_with_an_answer: 94; people_with_no_answer: 0; people_with_an_unreadable_answer: 0; people_with_an_answer_and_a_hover_log: 94; hover_rows_in_another_condition: 0; hover_rows_not_mouseover: 0; hover_rows_with_an_unknown_button_code: 0; hover_rows_with_no_duration: 0; hover_rows_with_an_unreadable_duration: 0; hover_rows_with_a_negative_duration: 0; paper_reports: 94
+== a hover counts if: any recorded hover; people with an answer but no hover log (left out): 0
+PRIMARY >> near_50: N 48; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 48; no base-rate hover 0/48 = 0.0% [0.0, 7.4]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 44; NEITHER 0; BASE_ONLY 2; FIFTY_ONLY 0; BOTH 42; no base-rate hover 0/44 = 0.0% [0.0, 8.0]
+== a hover counts if: duration unknown or at least 250 ms; people with an answer but no hover log (left out): 0
+  near_50: N 48; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 48; no base-rate hover 0/48 = 0.0% [0.0, 7.4]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 44; NEITHER 0; BASE_ONLY 2; FIFTY_ONLY 0; BOTH 42; no base-rate hover 0/44 = 0.0% [0.0, 8.0]
+== a hover counts if: duration unknown or at least 500 ms; people with an answer but no hover log (left out): 0
+  near_50: N 48; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 1; BOTH 47; no base-rate hover 1/48 = 2.1% [0.1, 11.1]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 44; NEITHER 1; BASE_ONLY 3; FIFTY_ONLY 0; BOTH 40; no base-rate hover 1/44 = 2.3% [0.1, 12.0]
+
+## SAMPLE 2: the authors' cleaned set before their last rule (analysis_scanpath.csv)
+  people_in_sample: 98; people_with_an_answer: 98; people_with_no_answer: 0; people_with_an_unreadable_answer: 0; people_with_an_answer_and_a_hover_log: 98; hover_rows_in_another_condition: 0; hover_rows_not_mouseover: 0; hover_rows_with_an_unknown_button_code: 0; hover_rows_with_no_duration: 0; hover_rows_with_an_unreadable_duration: 0; hover_rows_with_a_negative_duration: 0
+== a hover counts if: any recorded hover; people with an answer but no hover log (left out): 0
+  near_50: N 49; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 49; no base-rate hover 0/49 = 0.0% [0.0, 7.3]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 47; NEITHER 0; BASE_ONLY 2; FIFTY_ONLY 0; BOTH 45; no base-rate hover 0/47 = 0.0% [0.0, 7.5]
+== a hover counts if: duration unknown or at least 250 ms; people with an answer but no hover log (left out): 0
+  near_50: N 49; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 49; no base-rate hover 0/49 = 0.0% [0.0, 7.3]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 47; NEITHER 0; BASE_ONLY 2; FIFTY_ONLY 0; BOTH 45; no base-rate hover 0/47 = 0.0% [0.0, 7.5]
+== a hover counts if: duration unknown or at least 500 ms; people with an answer but no hover log (left out): 0
+  near_50: N 49; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 1; BOTH 48; no base-rate hover 1/49 = 2.0% [0.1, 10.9]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 47; NEITHER 1; BASE_ONLY 3; FIFTY_ONLY 0; BOTH 43; no base-rate hover 1/47 = 2.1% [0.1, 11.3]
+
+## SAMPLE 3: raw mouse log, none of the authors' exclusions (w2_prob_aitor.csv); our own hover rule
+  people_in_the_log: 172; rows_without_a_readable_time: 0; people_with_an_answer_event: 148; people_without_an_answer_event: 24; people_whose_first_answer_is_unreadable: 0; people_with_a_readable_answer: 148; people_with_more_than_one_answer_event: 0; people_with_an_answer_and_no_hover_on_any_number: 11; people_with_touch_events: 16
+== a hover counts if: any recorded hover; people with an answer but no hover log (left out): 0
+  near_50: N 67; NEITHER 2; BASE_ONLY 1; FIFTY_ONLY 3; BOTH 61; no base-rate hover 5/67 = 7.5% [2.5, 16.6]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 79; NEITHER 13; BASE_ONLY 6; FIFTY_ONLY 2; BOTH 58; no base-rate hover 15/79 = 19.0% [11.0, 29.4]
+== a hover counts if: duration unknown or at least 250 ms; people with an answer but no hover log (left out): 0
+  near_50: N 67; NEITHER 4; BASE_ONLY 0; FIFTY_ONLY 5; BOTH 58; no base-rate hover 9/67 = 13.4% [6.3, 24.0]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 79; NEITHER 17; BASE_ONLY 6; FIFTY_ONLY 3; BOTH 53; no base-rate hover 20/79 = 25.3% [16.2, 36.4]
+== a hover counts if: duration unknown or at least 500 ms; people with an answer but no hover log (left out): 0
+  near_50: N 67; NEITHER 5; BASE_ONLY 1; FIFTY_ONLY 9; BOTH 52; no base-rate hover 14/67 = 20.9% [11.9, 32.6]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 79; NEITHER 25; BASE_ONLY 6; FIFTY_ONLY 2; BOTH 46; no base-rate hover 27/79 = 34.2% [23.9, 45.7]
+
+## SAMPLE 3 without people who have touch events
+  people_with_a_readable_answer: 132; people_left_out_for_touch_events: 16; people_with_an_answer_and_no_hover_on_any_number: 7
+== a hover counts if: any recorded hover; people with an answer but no hover log (left out): 0
+  near_50: N 61; NEITHER 2; BASE_ONLY 1; FIFTY_ONLY 1; BOTH 57; no base-rate hover 3/61 = 4.9% [1.0, 13.7]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 69; NEITHER 9; BASE_ONLY 6; FIFTY_ONLY 1; BOTH 53; no base-rate hover 10/69 = 14.5% [7.2, 25.0]
+== a hover counts if: duration unknown or at least 250 ms; people with an answer but no hover log (left out): 0
+  near_50: N 61; NEITHER 4; BASE_ONLY 0; FIFTY_ONLY 3; BOTH 54; no base-rate hover 7/61 = 11.5% [4.7, 22.2]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 69; NEITHER 13; BASE_ONLY 6; FIFTY_ONLY 2; BOTH 48; no base-rate hover 15/69 = 21.7% [12.7, 33.3]
+== a hover counts if: duration unknown or at least 500 ms; people with an answer but no hover log (left out): 0
+  near_50: N 61; NEITHER 5; BASE_ONLY 1; FIFTY_ONLY 6; BOTH 49; no base-rate hover 11/61 = 18.0% [9.4, 30.0]
+  near_correct: N 2; NEITHER 0; BASE_ONLY 0; FIFTY_ONLY 0; BOTH 2; no base-rate hover 0/2 = 0.0% [0.0, 84.2]
+  other: N 69; NEITHER 21; BASE_ONLY 5; FIFTY_ONLY 1; BOTH 42; no base-rate hover 22/69 = 31.9% [21.2, 44.2]
+# RUN COMPLETE
