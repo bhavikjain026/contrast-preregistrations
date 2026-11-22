@@ -1,0 +1,5622 @@
+{
+ "date": "2026-11-18",
+ "data": "REAL: Steib et al. (2025) open data, CC BY 4.0 (secondary analysis, plan v13)",
+ "file_sha256": "b5e06520ddd15c8bf72de0ebe4c83e25328dfc57d72ddb22a173c238e8a14f84",
+ "script_sha256": "3edea828f11f74657176d29006e1f58b0aea20667eeee53a886d37e47254edbb",
+ "seed": 0,
+ "permutations": 10000,
+ "bootstrap_resamples": 10000,
+ "students": 515,
+ "design_table_published_numbers": {
+  "law d1": {
+   "inputs_pct": [
+    50.0,
+    85.0,
+    10.0
+   ],
+   "correct": 89.4737,
+   "within_1_point_of_correct": {
+    "false_alarm_complement": 0.53,
+    "equal_priors": 0.0
+   },
+   "wrong_pairs_within_1_point": {
+    "false_alarm_complement ~ equal_priors": 0.53
+   }
+  },
+  "law d2": {
+   "inputs_pct": [
+    41.0,
+    10.0,
+    3.0
+   ],
+   "correct": 69.8467,
+   "within_1_point_of_correct": {},
+   "wrong_pairs_within_1_point": {}
+  },
+  "law d3": {
+   "inputs_pct": [
+    10.0,
+    93.0,
+    50.0
+   ],
+   "correct": 17.1271,
+   "within_1_point_of_correct": {},
+   "wrong_pairs_within_1_point": {
+    "base_rate_only ~ joint_occurrence": 0.7
+   }
+  },
+  "medicine d1": {
+   "inputs_pct": [
+    6.0,
+    97.0,
+    2.0
+   ],
+   "correct": 75.5844,
+   "within_1_point_of_correct": {},
+   "wrong_pairs_within_1_point": {
+    "hit_rate ~ false_alarm_complement": 1.0,
+    "hit_rate ~ equal_priors": 0.98,
+    "base_rate_only ~ joint_occurrence": 0.18,
+    "false_alarm_complement ~ equal_priors": 0.02
+   }
+  },
+  "medicine d2": {
+   "inputs_pct": [
+    6.0,
+    80.0,
+    10.0
+   ],
+   "correct": 33.8028,
+   "within_1_point_of_correct": {},
+   "wrong_pairs_within_1_point": {}
+  },
+  "medicine d3": {
+   "inputs_pct": [
+    5.0,
+    96.0,
+    2.0
+   ],
+   "correct": 71.6418,
+   "within_1_point_of_correct": {},
+   "wrong_pairs_within_1_point": {
+    "base_rate_only ~ joint_occurrence": 0.2,
+    "false_alarm_complement ~ equal_priors": 0.04
+   }
+  },
+  "law d1star (NPV)": {
+   "correct": 85.7143,
+   "key_as_printed": 85.72,
+   "ignore_base_rate_npv": 85.7143,
+   "equals_correct_within_0.5": true
+  },
+  "medicine d1star (NPV)": {
+   "correct": 99.805,
+   "key_as_printed": 99.8,
+   "ignore_base_rate_npv": 97.0297,
+   "equals_correct_within_0.5": false
+  }
+ },
+ "data_checks": {
+  "counts": {},
+  "unlisted_labels": {},
+  "students_by_subject_and_group": {
+   "law, group 1": 51,
+   "law, group 2": 51,
+   "law, group 3": 51,
+   "law, group 4": 51,
+   "law, group 5": 51,
+   "medicine, group 1": 52,
+   "medicine, group 2": 52,
+   "medicine, group 3": 52,
+   "medicine, group 4": 52,
+   "medicine, group 5": 52
+  }
+ },
+ "analysis_1_pre_test_label_shares": {
+  "law": {
+   "PPV d1": {
+    "wrong_answers": 233,
+    "by_label": {
+     "guessing": {
+      "k": 146,
+      "n": 233,
+      "share": 0.6266094420600858,
+      "ci95": [
+       0.5610583118329202,
+       0.6888943310077267
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 31,
+      "n": 233,
+      "share": 0.13304721030042918,
+      "ci95": [
+       0.09222111926537012,
+       0.18350546152544414
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 24,
+      "n": 233,
+      "share": 0.10300429184549356,
+      "ci95": [
+       0.06711943560417662,
+       0.1493791227759227
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 12,
+      "n": 233,
+      "share": 0.05150214592274678,
+      "ci95": [
+       0.026891712914024795,
+       0.08823511905440608
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 11,
+      "n": 233,
+      "share": 0.04721030042918455,
+      "ci95": [
+       0.023799627666328784,
+       0.08290068276151259
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 9,
+      "n": 233,
+      "share": 0.03862660944206009,
+      "ci95": [
+       0.017812128985100366,
+       0.07205653306088888
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 76,
+     "n": 233,
+     "share": 0.3261802575107296,
+     "ci95": [
+      0.26639826987101983,
+      0.39045235035764747
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 36,
+     "n": 233,
+     "share": 0.15450643776824036,
+     "ci95": [
+      0.1106207638299592,
+      0.2074297424154909
+     ]
+    }
+   },
+   "PPV d2": {
+    "wrong_answers": 250,
+    "by_label": {
+     "guessing": {
+      "k": 98,
+      "n": 250,
+      "share": 0.392,
+      "ci95": [
+       0.3310876282131851,
+       0.45550544200497906
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 72,
+      "n": 250,
+      "share": 0.288,
+      "ci95": [
+       0.23268282133123372,
+       0.3484231986261386
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 41,
+      "n": 250,
+      "share": 0.164,
+      "ci95": [
+       0.12033326392444703,
+       0.21583624794866896
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 39,
+      "n": 250,
+      "share": 0.156,
+      "ci95": [
+       0.11334352670900716,
+       0.20702926474108108
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 152,
+     "n": 250,
+     "share": 0.608,
+     "ci95": [
+      0.5444945579950209,
+      0.6689123717868148
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 113,
+     "n": 250,
+     "share": 0.452,
+     "ci95": [
+      0.38920184333581975,
+      0.5159497495887362
+     ]
+    }
+   },
+   "PPV d3": {
+    "wrong_answers": 245,
+    "by_label": {
+     "guessing": {
+      "k": 152,
+      "n": 245,
+      "share": 0.6204081632653061,
+      "ci95": [
+       0.5564387342995759,
+       0.6814260326722352
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 36,
+      "n": 245,
+      "share": 0.1469387755102041,
+      "ci95": [
+       0.10508408024756453,
+       0.19757727477396847
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 28,
+      "n": 245,
+      "share": 0.11428571428571428,
+      "ci95": [
+       0.07729995969401506,
+       0.16092558597417236
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 17,
+      "n": 245,
+      "share": 0.06938775510204082,
+      "ci95": [
+       0.04093765043064047,
+       0.10877365243824054
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 5,
+      "n": 245,
+      "share": 0.02040816326530612,
+      "ci95": [
+       0.006658888403574902,
+       0.04698059728161427
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 4,
+      "n": 245,
+      "share": 0.0163265306122449,
+      "ci95": [
+       0.004465888751287148,
+       0.04127249332227253
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 2,
+      "n": 245,
+      "share": 0.00816326530612245,
+      "ci95": [
+       0.0009901427196198503,
+       0.029175764422771092
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 1,
+      "n": 245,
+      "share": 0.004081632653061225,
+      "ci95": [
+       0.00010333265258625513,
+       0.022530357307881648
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 62,
+     "n": 245,
+     "share": 0.2530612244897959,
+     "ci95": [
+      0.1998670064497479,
+      0.3123371871490419
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 22,
+     "n": 245,
+     "share": 0.08979591836734693,
+     "ci95": [
+      0.05713186069170784,
+      0.13279492499358864
+     ]
+    }
+   },
+   "PPV d1+d2+d3 (answers pooled)": {
+    "wrong_answers": 728,
+    "by_label": {
+     "guessing": {
+      "k": 396,
+      "n": 728,
+      "share": 0.5439560439560439,
+      "ci95": [
+       0.5069731125510124,
+       0.5805814634484437
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 106,
+      "n": 728,
+      "share": 0.14560439560439561,
+      "ci95": [
+       0.12077410063022068,
+       0.1733454719272155
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 89,
+      "n": 728,
+      "share": 0.12225274725274725,
+      "ci95": [
+       0.09933972943775513,
+       0.14827622474565033
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 82,
+      "n": 728,
+      "share": 0.11263736263736264,
+      "ci95": [
+       0.09059226517629416,
+       0.13787618610119692
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 39,
+      "n": 728,
+      "share": 0.05357142857142857,
+      "ci95": [
+       0.038368290258197095,
+       0.07250929451660622
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 13,
+      "n": 728,
+      "share": 0.017857142857142856,
+      "ci95": [
+       0.009541571772235531,
+       0.030342684851308466
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 2,
+      "n": 728,
+      "share": 0.0027472527472527475,
+      "ci95": [
+       0.00033287838488478766,
+       0.009888474084007668
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 1,
+      "n": 728,
+      "share": 0.0013736263736263737,
+      "ci95": [
+       3.477660404951423e-05,
+       0.007629368996989256
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 290,
+     "n": 728,
+     "share": 0.3983516483516483,
+     "ci95": [
+      0.3625767313442571,
+      0.43495365622493265
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 171,
+     "n": 728,
+     "share": 0.2348901098901099,
+     "ci95": [
+      0.20453435314038462,
+      0.26741113652063275
+     ]
+    }
+   },
+   "NPV d1star (separately)": {
+    "wrong_answers": 239,
+    "by_label": {
+     "guessing": {
+      "k": 141,
+      "n": 239,
+      "share": 0.5899581589958159,
+      "ci95": [
+       0.5247150235459044,
+       0.6529412234451197
+      ]
+     },
+     "NPV-Fisherian": {
+      "k": 52,
+      "n": 239,
+      "share": 0.2175732217573222,
+      "ci95": [
+       0.16697122871650655,
+       0.27532592156451535
+      ]
+     },
+     "NPV-Joint occurence": {
+      "k": 21,
+      "n": 239,
+      "share": 0.08786610878661087,
+      "ci95": [
+       0.055214387442145324,
+       0.13117584395754153
+      ]
+     },
+     "NPV-Evidence only": {
+      "k": 12,
+      "n": 239,
+      "share": 0.0502092050209205,
+      "ci95": [
+       0.026209618924643907,
+       0.08606229625985237
+      ]
+     },
+     "NPV-Base-rate only": {
+      "k": 8,
+      "n": 239,
+      "share": 0.03347280334728033,
+      "ci95": [
+       0.014559879448589146,
+       0.06488693734205636
+      ]
+     },
+     "NPV-Likelihood-substr.": {
+      "k": 5,
+      "n": 239,
+      "share": 0.02092050209205021,
+      "ci95": [
+       0.006826898628987899,
+       0.048143496720326556
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 86,
+     "n": 239,
+     "share": 0.3598326359832636,
+     "ci95": [
+      0.2989734950403392,
+      0.42421682912982633
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 29,
+     "n": 239,
+     "share": 0.12133891213389121,
+     "ci95": [
+      0.0827887249801328,
+      0.1695954591705615
+     ]
+    }
+   }
+  },
+  "medicine": {
+   "PPV d1": {
+    "wrong_answers": 214,
+    "by_label": {
+     "guessing": {
+      "k": 144,
+      "n": 214,
+      "share": 0.6728971962616822,
+      "ci95": [
+       0.6056286385651561,
+       0.7352967170796401
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 47,
+      "n": 214,
+      "share": 0.21962616822429906,
+      "ci95": [
+       0.16606167002312253,
+       0.2811331069245207
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 11,
+      "n": 214,
+      "share": 0.0514018691588785,
+      "ci95": [
+       0.025935620637400476,
+       0.09010931365129687
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 5,
+      "n": 214,
+      "share": 0.02336448598130841,
+      "ci95": [
+       0.007628922094783344,
+       0.05367973067851339
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 3,
+      "n": 214,
+      "share": 0.014018691588785047,
+      "ci95": [
+       0.0029003743623390948,
+       0.040419748390064875
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 2,
+      "n": 214,
+      "share": 0.009345794392523364,
+      "ci95": [
+       0.0011338297797006632,
+       0.033350606644631915
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 2,
+      "n": 214,
+      "share": 0.009345794392523364,
+      "ci95": [
+       0.0011338297797006632,
+       0.033350606644631915
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 66,
+     "n": 214,
+     "share": 0.308411214953271,
+     "ci95": [
+      0.247245378874821,
+      0.37497628009342193
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 8,
+     "n": 214,
+     "share": 0.037383177570093455,
+     "ci95": [
+      0.016275203167852022,
+      0.07232834384268473
+     ]
+    }
+   },
+   "PPV d2": {
+    "wrong_answers": 196,
+    "by_label": {
+     "guessing": {
+      "k": 122,
+      "n": 196,
+      "share": 0.6224489795918368,
+      "ci95": [
+       0.550589139304742,
+       0.6905442423248445
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 32,
+      "n": 196,
+      "share": 0.16326530612244897,
+      "ci95": [
+       0.11443373324375307,
+       0.2225931851247021
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 18,
+      "n": 196,
+      "share": 0.09183673469387756,
+      "ci95": [
+       0.0553395541795087,
+       0.14125684884383097
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 9,
+      "n": 196,
+      "share": 0.04591836734693878,
+      "ci95": [
+       0.021208832554705306,
+       0.08537516791491707
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 7,
+      "n": 196,
+      "share": 0.03571428571428571,
+      "ci95": [
+       0.014477429955192857,
+       0.07219788361298105
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 5,
+      "n": 196,
+      "share": 0.025510204081632654,
+      "ci95": [
+       0.00833384841783111,
+       0.058525223928202974
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 3,
+      "n": 196,
+      "share": 0.015306122448979591,
+      "ci95": [
+       0.0031676819430438135,
+       0.04407708758811825
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 64,
+     "n": 196,
+     "share": 0.32653061224489793,
+     "ci95": [
+      0.2614110736123141,
+      0.39699139940972494
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 23,
+     "n": 196,
+     "share": 0.11734693877551021,
+     "ci95": [
+      0.07586078491611582,
+      0.1708609171844159
+     ]
+    }
+   },
+   "PPV d3": {
+    "wrong_answers": 168,
+    "by_label": {
+     "guessing": {
+      "k": 107,
+      "n": 168,
+      "share": 0.6369047619047619,
+      "ci95": [
+       0.5592985340186907,
+       0.7095869563900064
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 30,
+      "n": 168,
+      "share": 0.17857142857142858,
+      "ci95": [
+       0.12384354315870542,
+       0.2450020983052811
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 20,
+      "n": 168,
+      "share": 0.11904761904761904,
+      "ci95": [
+       0.07425519665580177,
+       0.1778580773041716
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 5,
+      "n": 168,
+      "share": 0.02976190476190476,
+      "ci95": [
+       0.009732816046432766,
+       0.06808486965750829
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 4,
+      "n": 168,
+      "share": 0.023809523809523808,
+      "ci95": [
+       0.006524539882497018,
+       0.05983734256901534
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 2,
+      "n": 168,
+      "share": 0.011904761904761904,
+      "ci95": [
+       0.001444987505028436,
+       0.04234055906722073
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 55,
+     "n": 168,
+     "share": 0.3273809523809524,
+     "ci95": [
+      0.257077312956261,
+      0.4039006180651757
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 5,
+     "n": 168,
+     "share": 0.02976190476190476,
+     "ci95": [
+      0.009732816046432766,
+      0.06808486965750829
+     ]
+    }
+   },
+   "PPV d1+d2+d3 (answers pooled)": {
+    "wrong_answers": 578,
+    "by_label": {
+     "guessing": {
+      "k": 373,
+      "n": 578,
+      "share": 0.6453287197231834,
+      "ci95": [
+       0.6047964532251868,
+       0.6843669841509943
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 109,
+      "n": 578,
+      "share": 0.18858131487889274,
+      "ci95": [
+       0.15748517649432991,
+       0.22289865460285174
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 40,
+      "n": 578,
+      "share": 0.06920415224913495,
+      "ci95": [
+       0.049897334356049004,
+       0.09304687654989525
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 28,
+      "n": 578,
+      "share": 0.04844290657439446,
+      "ci95": [
+       0.03242788823621852,
+       0.06925502370280248
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 13,
+      "n": 578,
+      "share": 0.02249134948096886,
+      "ci95": [
+       0.012028771371900282,
+       0.03815381558816032
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 8,
+      "n": 578,
+      "share": 0.01384083044982699,
+      "ci95": [
+       0.005993922891522224,
+       0.027089046005583345
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 4,
+      "n": 578,
+      "share": 0.006920415224913495,
+      "ci95": [
+       0.0018887048157401642,
+       0.017623537410120817
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 3,
+      "n": 578,
+      "share": 0.005190311418685121,
+      "ci95": [
+       0.0010716486636485408,
+       0.015092782577304143
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 185,
+     "n": 578,
+     "share": 0.32006920415224915,
+     "ci95": [
+      0.2821761292546941,
+      0.35981330778721304
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 36,
+     "n": 578,
+     "share": 0.06228373702422145,
+     "ci95": [
+      0.04400037436340614,
+      0.08518731052178101
+     ]
+    }
+   },
+   "NPV d1star (separately)": {
+    "wrong_answers": 212,
+    "by_label": {
+     "guessing": {
+      "k": 138,
+      "n": 212,
+      "share": 0.6509433962264151,
+      "ci95": [
+       0.5826529201060483,
+       0.7149453893976889
+      ]
+     },
+     "NPV-Fisherian": {
+      "k": 57,
+      "n": 212,
+      "share": 0.2688679245283019,
+      "ci95": [
+       0.21044346982796558,
+       0.3338808386850674
+      ]
+     },
+     "NPV-Joint occurence": {
+      "k": 11,
+      "n": 212,
+      "share": 0.05188679245283019,
+      "ci95": [
+       0.026182980684638587,
+       0.09094168658054684
+      ]
+     },
+     "NPV-Likelihood-substr.": {
+      "k": 3,
+      "n": 212,
+      "share": 0.014150943396226415,
+      "ci95": [
+       0.0029278262502695405,
+       0.040795871307174
+      ]
+     },
+     "NPV-Base-rate only": {
+      "k": 2,
+      "n": 212,
+      "share": 0.009433962264150943,
+      "ci95": [
+       0.0011445455006057082,
+       0.033661358190587375
+      ]
+     },
+     "NPV-Evidence only": {
+      "k": 1,
+      "n": 212,
+      "share": 0.0047169811320754715,
+      "ci95": [
+       0.00011941649185045304,
+       0.02599971029620742
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 73,
+     "n": 212,
+     "share": 0.3443396226415094,
+     "ci95": [
+      0.28060701754307105,
+      0.4124953499974213
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 13,
+     "n": 212,
+     "share": 0.06132075471698113,
+     "ci95": [
+      0.033051457295148405,
+      0.10257776493898786
+     ]
+    }
+   }
+  },
+  "pooled": {
+   "PPV d1": {
+    "wrong_answers": 447,
+    "by_label": {
+     "guessing": {
+      "k": 290,
+      "n": 447,
+      "share": 0.6487695749440716,
+      "ci95": [
+       0.6025274608530037,
+       0.6930279006298709
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 78,
+      "n": 447,
+      "share": 0.174496644295302,
+      "ci95": [
+       0.14044659412477195,
+       0.21292211012722145
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 29,
+      "n": 447,
+      "share": 0.06487695749440715,
+      "ci95": [
+       0.04387606952942721,
+       0.09184764102632557
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 20,
+      "n": 447,
+      "share": 0.0447427293064877,
+      "ci95": [
+       0.027540948319481066,
+       0.06825779458008849
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 15,
+      "n": 447,
+      "share": 0.03355704697986577,
+      "ci95": [
+       0.018900920200676682,
+       0.05474386166268717
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 13,
+      "n": 447,
+      "share": 0.029082774049217,
+      "ci95": [
+       0.015574327787162338,
+       0.04921899810220307
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 2,
+      "n": 447,
+      "share": 0.0044742729306487695,
+      "ci95": [
+       0.00054231525150043,
+       0.016068430409787574
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 142,
+     "n": 447,
+     "share": 0.31767337807606266,
+     "ci95": [
+      0.274725781268093,
+      0.3630541653378826
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 44,
+     "n": 447,
+     "share": 0.09843400447427293,
+     "ci95": [
+      0.07243605746677158,
+      0.12988674162052213
+     ]
+    }
+   },
+   "PPV d2": {
+    "wrong_answers": 446,
+    "by_label": {
+     "guessing": {
+      "k": 220,
+      "n": 446,
+      "share": 0.49327354260089684,
+      "ci95": [
+       0.44593099563508964,
+       0.5407058602310849
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 77,
+      "n": 446,
+      "share": 0.1726457399103139,
+      "ci95": [
+       0.13871886469707426,
+       0.2109836589100483
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 71,
+      "n": 446,
+      "share": 0.1591928251121076,
+      "ci95": [
+       0.12647351756231018,
+       0.19651035766059305
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 59,
+      "n": 446,
+      "share": 0.13228699551569506,
+      "ci95": [
+       0.10225012509815487,
+       0.16730097152511308
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 9,
+      "n": 446,
+      "share": 0.020179372197309416,
+      "ci95": [
+       0.009267809762064884,
+       0.03796001774297343
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 7,
+      "n": 446,
+      "share": 0.01569506726457399,
+      "ci95": [
+       0.006332913558393341,
+       0.032069269706165485
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 3,
+      "n": 446,
+      "share": 0.006726457399103139,
+      "ci95": [
+       0.0013893111481346537,
+       0.019530823856361918
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 216,
+     "n": 446,
+     "share": 0.484304932735426,
+     "ci95": [
+      0.43704079751467123,
+      0.5317785353776601
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 136,
+     "n": 446,
+     "share": 0.30493273542600896,
+     "ci95": [
+      0.2625022155990657,
+      0.3499733308514433
+     ]
+    }
+   },
+   "PPV d3": {
+    "wrong_answers": 413,
+    "by_label": {
+     "guessing": {
+      "k": 259,
+      "n": 413,
+      "share": 0.6271186440677966,
+      "ci95": [
+       0.5784926968814901,
+       0.6739088976774483
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 66,
+      "n": 413,
+      "share": 0.15980629539951574,
+      "ci95": [
+       0.1258019201950006,
+       0.19877354919380738
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 32,
+      "n": 413,
+      "share": 0.0774818401937046,
+      "ci95": [
+       0.05359891448788526,
+       0.10762234456551832
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 24,
+      "n": 413,
+      "share": 0.05811138014527845,
+      "ci95": [
+       0.037584209026435014,
+       0.08523384095239717
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 22,
+      "n": 413,
+      "share": 0.053268765133171914,
+      "ci95": [
+       0.033680667475203506,
+       0.07954146735694338
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 5,
+      "n": 413,
+      "share": 0.012106537530266344,
+      "ci95": [
+       0.003942326797769281,
+       0.028025139322150297
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 3,
+      "n": 413,
+      "share": 0.007263922518159807,
+      "ci95": [
+       0.0015005078818055785,
+       0.02108049540499843
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 2,
+      "n": 413,
+      "share": 0.004842615012106538,
+      "ci95": [
+       0.0005870021215702339,
+       0.017382889900008074
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 117,
+     "n": 413,
+     "share": 0.28329297820823246,
+     "ci95": [
+      0.240313379317631,
+      0.3294093562077685
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 27,
+     "n": 413,
+     "share": 0.06537530266343826,
+     "ci95": [
+      0.04352126810735101,
+      0.09369486783765466
+     ]
+    }
+   },
+   "PPV d1+d2+d3 (answers pooled)": {
+    "wrong_answers": 1306,
+    "by_label": {
+     "guessing": {
+      "k": 769,
+      "n": 1306,
+      "share": 0.5888208269525268,
+      "ci95": [
+       0.5615767643959816,
+       0.6156642139802796
+      ]
+     },
+     "PPV-Fisherian": {
+      "k": 215,
+      "n": 1306,
+      "share": 0.16462480857580397,
+      "ci95": [
+       0.14490180454047116,
+       0.18586975871315597
+      ]
+     },
+     "PPV-Joint occurence": {
+      "k": 110,
+      "n": 1306,
+      "share": 0.08422664624808576,
+      "ci95": [
+       0.06973040295841577,
+       0.10062483829040948
+      ]
+     },
+     "PPV-Base-rate only": {
+      "k": 97,
+      "n": 1306,
+      "share": 0.07427258805513016,
+      "ci95": [
+       0.06063966962709263,
+       0.08985662441752558
+      ]
+     },
+     "PPV-Likelihood-substr.": {
+      "k": 53,
+      "n": 1306,
+      "share": 0.04058192955589587,
+      "ci95": [
+       0.030543784028541944,
+       0.05274850256714417
+      ]
+     },
+     "PPV-Evidence only": {
+      "k": 52,
+      "n": 1306,
+      "share": 0.039816232771822356,
+      "ci95": [
+       0.029877043658570343,
+       0.05188824017275717
+      ]
+     },
+     "PPV-Likelihood": {
+      "k": 5,
+      "n": 1306,
+      "share": 0.0038284839203675345,
+      "ci95": [
+       0.0012442311324641227,
+       0.008911614317838405
+      ]
+     },
+     "PPV-Pre-Bayes": {
+      "k": 5,
+      "n": 1306,
+      "share": 0.0038284839203675345,
+      "ci95": [
+       0.0012442311324641227,
+       0.008911614317838405
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 475,
+     "n": 1306,
+     "share": 0.36370597243491576,
+     "ci95": [
+      0.337564247534574,
+      0.3904627846889296
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 207,
+     "n": 1306,
+     "share": 0.1584992343032159,
+     "ci95": [
+      0.13909521267749425,
+      0.1794535752218528
+     ]
+    }
+   },
+   "NPV d1star (separately)": {
+    "wrong_answers": 451,
+    "by_label": {
+     "guessing": {
+      "k": 279,
+      "n": 451,
+      "share": 0.6186252771618626,
+      "ci95": [
+       0.5720285784316461,
+       0.6636551991094013
+      ]
+     },
+     "NPV-Fisherian": {
+      "k": 109,
+      "n": 451,
+      "share": 0.24168514412416853,
+      "ci95": [
+       0.20287155349599859,
+       0.28392459256136887
+      ]
+     },
+     "NPV-Joint occurence": {
+      "k": 32,
+      "n": 451,
+      "share": 0.07095343680709534,
+      "ci95": [
+       0.04903518801561261,
+       0.09869116121580153
+      ]
+     },
+     "NPV-Evidence only": {
+      "k": 13,
+      "n": 451,
+      "share": 0.028824833702882482,
+      "ci95": [
+       0.015435405144088333,
+       0.04878697908382565
+      ]
+     },
+     "NPV-Base-rate only": {
+      "k": 10,
+      "n": 451,
+      "share": 0.022172949002217297,
+      "ci95": [
+       0.010682800620874306,
+       0.04039794577966
+      ]
+     },
+     "NPV-Likelihood-substr.": {
+      "k": 8,
+      "n": 451,
+      "share": 0.017738359201773836,
+      "ci95": [
+       0.007688491900722692,
+       0.03465132452887261
+      ]
+     }
+    },
+    "shared_four_methods": {
+     "k": 159,
+     "n": 451,
+     "share": 0.352549889135255,
+     "ci95": [
+      0.30844132744984226,
+      0.3986069376675235
+     ]
+    },
+    "Base-rate only + Joint occurence (combined)": {
+     "k": 42,
+     "n": 451,
+     "share": 0.09312638580931264,
+     "ci95": [
+      0.06794263764958393,
+      0.12379357416894644
+     ]
+    }
+   }
+  }
+ },
+ "analysis_2_consistency": {
+  "law": {
+   "primary: all wrong-task labels the same known-error label": {
+    "observed_consistent": {
+     "k": 9,
+     "n": 246,
+     "share": 0.036585365853658534,
+     "ci95": [
+      0.016863237097952406,
+      0.06831202069431577
+     ]
+    },
+    "shuffled_expected_share": 0.006778861788617887,
+    "shuffled_2.5_97.5": [
+     0.0,
+     0.016260162601626018
+    ],
+    "shared_label_counts": {
+     "PPV-Fisherian": 6,
+     "PPV-Joint occurence": 2,
+     "PPV-Base-rate only": 1
+    }
+   },
+   "secondary: all wrong-task labels the same label (incl. guessing / empty)": {
+    "observed_consistent": {
+     "k": 86,
+     "n": 246,
+     "share": 0.34959349593495936,
+     "ci95": [
+      0.2901112461903833,
+      0.41275009063499224
+     ]
+    },
+    "shuffled_expected_share": 0.16575121951219512,
+    "shuffled_2.5_97.5": [
+     0.13008130081300814,
+     0.1991869918699187
+    ],
+    "shared_label_counts": {
+     "guessing": 77,
+     "PPV-Fisherian": 6,
+     "PPV-Joint occurence": 2,
+     "PPV-Base-rate only": 1
+    }
+   },
+   "sensitivity: as primary, Base-rate only and Joint occurence as one label": {
+    "observed_consistent": {
+     "k": 13,
+     "n": 246,
+     "share": 0.052845528455284556,
+     "ci95": [
+      0.02843461429746172,
+      0.08867225007902316
+     ]
+    },
+    "shuffled_expected_share": 0.012705284552845529,
+    "shuffled_2.5_97.5": [
+     0.0,
+     0.028455284552845527
+    ],
+    "shared_label_counts": {
+     "PPV-Base-rate only + Joint occurence": 7,
+     "PPV-Fisherian": 6
+    }
+   }
+  },
+  "medicine": {
+   "primary: all wrong-task labels the same known-error label": {
+    "observed_consistent": {
+     "k": 10,
+     "n": 194,
+     "share": 0.05154639175257732,
+     "ci95": [
+      0.024992052403242628,
+      0.09275068143096804
+     ]
+    },
+    "shuffled_expected_share": 0.013059278350515461,
+    "shuffled_2.5_97.5": [
+     0.0,
+     0.030927835051546393
+    ],
+    "shared_label_counts": {
+     "PPV-Fisherian": 7,
+     "PPV-Joint occurence": 2,
+     "PPV-Likelihood-substr.": 1
+    }
+   },
+   "secondary: all wrong-task labels the same label (incl. guessing / empty)": {
+    "observed_consistent": {
+     "k": 90,
+     "n": 194,
+     "share": 0.4639175257731959,
+     "ci95": [
+      0.39219779116201975,
+      0.5367567756661894
+     ]
+    },
+    "shuffled_expected_share": 0.3071185567010309,
+    "shuffled_2.5_97.5": [
+     0.26288659793814434,
+     0.35051546391752575
+    ],
+    "shared_label_counts": {
+     "guessing": 80,
+     "PPV-Fisherian": 7,
+     "PPV-Joint occurence": 2,
+     "PPV-Likelihood-substr.": 1
+    }
+   },
+   "sensitivity: as primary, Base-rate only and Joint occurence as one label": {
+    "observed_consistent": {
+     "k": 11,
+     "n": 194,
+     "share": 0.05670103092783505,
+     "ci95": [
+      0.028641516292221975,
+      0.09918741031633034
+     ]
+    },
+    "shuffled_expected_share": 0.013410309278350517,
+    "shuffled_2.5_97.5": [
+     0.0,
+     0.030927835051546393
+    ],
+    "shared_label_counts": {
+     "PPV-Fisherian": 7,
+     "PPV-Base-rate only + Joint occurence": 3,
+     "PPV-Likelihood-substr.": 1
+    }
+   }
+  },
+  "pooled": {
+   "primary: all wrong-task labels the same known-error label": {
+    "observed_consistent": {
+     "k": 19,
+     "n": 440,
+     "share": 0.04318181818181818,
+     "ci95": [
+      0.02619532317635774,
+      0.06661430086704166
+     ]
+    },
+    "shuffled_expected_share": 0.009547954545454545,
+    "shuffled_2.5_97.5": [
+     0.0022727272727272726,
+     0.01818181818181818
+    ],
+    "shared_label_counts": {
+     "PPV-Fisherian": 13,
+     "PPV-Joint occurence": 4,
+     "PPV-Base-rate only": 1,
+     "PPV-Likelihood-substr.": 1
+    }
+   },
+   "secondary: all wrong-task labels the same label (incl. guessing / empty)": {
+    "observed_consistent": {
+     "k": 176,
+     "n": 440,
+     "share": 0.4,
+     "ci95": [
+      0.3538960099393624,
+      0.4474578377747902
+     ]
+    },
+    "shuffled_expected_share": 0.22808136363636364,
+    "shuffled_2.5_97.5": [
+     0.2,
+     0.25681818181818183
+    ],
+    "shared_label_counts": {
+     "guessing": 157,
+     "PPV-Fisherian": 13,
+     "PPV-Joint occurence": 4,
+     "PPV-Base-rate only": 1,
+     "PPV-Likelihood-substr.": 1
+    }
+   },
+   "sensitivity: as primary, Base-rate only and Joint occurence as one label": {
+    "observed_consistent": {
+     "k": 24,
+     "n": 440,
+     "share": 0.05454545454545454,
+     "ci95": [
+      0.03525725962409533,
+      0.08007481297306832
+     ]
+    },
+    "shuffled_expected_share": 0.013016136363636363,
+    "shuffled_2.5_97.5": [
+     0.004545454545454545,
+     0.022727272727272728
+    ],
+    "shared_label_counts": {
+     "PPV-Fisherian": 13,
+     "PPV-Base-rate only + Joint occurence": 10,
+     "PPV-Likelihood-substr.": 1
+    }
+   }
+  }
+ },
+ "analysis_3_d1_over_time": {
+  "law": {
+   "tables": {
+    "training (groups 1-4 pooled)": {
+     "pre_to_post": [
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 51
+      },
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 48
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 12
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 11
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 9
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 8
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 8
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 7
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "correct",
+       "count": 6
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 4
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 3
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 3
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Base-rate only",
+       "count": 2
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      }
+     ],
+     "pre_to_follow_up": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 62
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 24
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 15
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 12
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 11
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 10
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 9
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 6
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 6
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 5
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 5
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 5
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Evidence only",
+       "count": 4
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 4
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Joint occurence",
+       "count": 3
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Evidence only",
+       "count": 3
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      }
+     ],
+     "pre_post_follow_up": [
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 30
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 22
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 18
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 11
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 5
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 5
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Base-rate only",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "PPV-Base-rate only",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "PPV-Fisherian",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 1
+      }
+     ]
+    },
+    "control (group 5)": {
+     "pre_to_post": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 21
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 4
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 3
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      }
+     ],
+     "pre_to_follow_up": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 20
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 5
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 4
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Joint occurence",
+       "count": 3
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      }
+     ],
+     "pre_post_follow_up": [
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 16
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 4
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Evidence only",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 1
+      }
+     ]
+    }
+   },
+   "contrast_correct_at_follow_up_among_pre_known_error": {
+    "training": {
+     "k": 8,
+     "n": 72,
+     "share": 0.1111111111111111,
+     "ci95": [
+      0.04920803927064098,
+      0.2072468706667488
+     ]
+    },
+    "control": {
+     "k": 0,
+     "n": 15,
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.218019360910534
+     ]
+    },
+    "training_minus_control_newcombe": {
+     "diff": 0.1111111111111111,
+     "ci95": [
+      -0.09973137040473168,
+      0.20422938233664037
+     ]
+    }
+   },
+   "control_same_label_at_follow_up": {
+    "k": 4,
+    "n": 15,
+    "share": 0.26666666666666666,
+    "ci95": [
+     0.07787154629104358,
+     0.5510032410369705
+    ]
+   },
+   "left_out_no_follow_up_d1": {
+    "training (groups 1-4 pooled)": 0,
+    "control (group 5)": 0
+   }
+  },
+  "medicine": {
+   "tables": {
+    "training (groups 1-4 pooled)": {
+     "pre_to_post": [
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 85
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 39
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 27
+      },
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 22
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 11
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 8
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_to_follow_up": [
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 70
+      },
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 34
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 33
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 19
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 14
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 6
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 5
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 4
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 3
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Pre-Bayes",
+       "count": 3
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_post_follow_up": [
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 59
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 32
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 22
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 17
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 11
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 9
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 9
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 6
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 5
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 4
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Pre-Bayes",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Pre-Bayes",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      }
+     ]
+    },
+    "control (group 5)": {
+     "pre_to_post": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 13
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 11
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 6
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 5
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 5
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_to_follow_up": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 20
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 7
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 6
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 4
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_post_follow_up": [
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 9
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Evidence only",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      }
+     ]
+    }
+   },
+   "contrast_correct_at_follow_up_among_pre_known_error": {
+    "training": {
+     "k": 29,
+     "n": 58,
+     "share": 0.5,
+     "ci95": [
+      0.36576915772593044,
+      0.6342308422740695
+     ]
+    },
+    "control": {
+     "k": 4,
+     "n": 12,
+     "share": 0.3333333333333333,
+     "ci95": [
+      0.09924609114958328,
+      0.6511244935811844
+     ]
+    },
+    "training_minus_control_newcombe": {
+     "diff": 0.16666666666666669,
+     "ci95": [
+      -0.1362030625506902,
+      0.3982647536481472
+     ]
+    }
+   },
+   "control_same_label_at_follow_up": {
+    "k": 2,
+    "n": 12,
+    "share": 0.16666666666666666,
+    "ci95": [
+     0.020862525460092384,
+     0.48413774868596704
+    ]
+   },
+   "left_out_no_follow_up_d1": {
+    "training (groups 1-4 pooled)": 0,
+    "control (group 5)": 0
+   }
+  },
+  "pooled": {
+   "tables": {
+    "training (groups 1-4 pooled)": {
+     "pre_to_post": [
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 136
+      },
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 70
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 51
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 38
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 19
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 11
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 11
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 9
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 8
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "correct",
+       "count": 7
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 4
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 4
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 3
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 3
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Base-rate only",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_to_follow_up": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 96
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 94
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 48
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 25
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 20
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 16
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 11
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 10
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 8
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 6
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 6
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 6
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 6
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 6
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 5
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 5
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 5
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Evidence only",
+       "count": 4
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 3
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Joint occurence",
+       "count": 3
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Pre-Bayes",
+       "count": 3
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Evidence only",
+       "count": 3
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Pre-Bayes",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_post_follow_up": [
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 77
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 44
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 43
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 39
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 18
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 16
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 13
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 8
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 7
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 6
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 6
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 6
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 5
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 5
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 4
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Base-rate only",
+       "count": 3
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "PPV-Base-rate only",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "PPV-Fisherian",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Pre-Bayes",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Pre-Bayes",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      }
+     ]
+    },
+    "control (group 5)": {
+     "pre_to_post": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 34
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 14
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 10
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 8
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 7
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 3
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Evidence only",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 2
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 2
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_to_follow_up": [
+      {
+       "from": "guessing",
+       "to": "guessing",
+       "count": 40
+      },
+      {
+       "from": "correct",
+       "to": "correct",
+       "count": 11
+      },
+      {
+       "from": "guessing",
+       "to": "correct",
+       "count": 11
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Likelihood-substr.",
+       "count": 5
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "guessing",
+       "count": 4
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Fisherian",
+       "count": 4
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "PPV-Joint occurence",
+       "count": 3
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "from": "PPV-Fisherian",
+       "to": "correct",
+       "count": 2
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "guessing",
+       "count": 2
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "from": "PPV-Base-rate only",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Evidence only",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "PPV-Joint occurence",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "correct",
+       "count": 1
+      },
+      {
+       "from": "PPV-Likelihood-substr.",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "correct",
+       "to": "guessing",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "from": "guessing",
+       "to": "PPV-Pre-Bayes",
+       "count": 1
+      }
+     ],
+     "pre_post_follow_up": [
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 25
+      },
+      {
+       "pre": "correct",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 10
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 8
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 5
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "guessing",
+       "count": 5
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Joint occurence",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 3
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 3
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 2
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 2
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "guessing",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "correct",
+       "post": "guessing",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Base-rate only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Evidence only",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Evidence only",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Evidence only",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Joint occurence",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Base-rate only",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Base-rate only",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "PPV-Evidence only",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Base-rate only",
+       "post": "correct",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Pre-Bayes",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "correct",
+       "follow_up": "PPV-Pre-Bayes",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "correct",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "PPV-Fisherian",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Fisherian",
+       "post": "guessing",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Evidence only",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "PPV-Fisherian",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Likelihood-substr.",
+       "post": "PPV-Likelihood-substr.",
+       "follow_up": "correct",
+       "count": 1
+      },
+      {
+       "pre": "PPV-Joint occurence",
+       "post": "correct",
+       "follow_up": "guessing",
+       "count": 1
+      },
+      {
+       "pre": "guessing",
+       "post": "PPV-Fisherian",
+       "follow_up": "PPV-Likelihood-substr.",
+       "count": 1
+      }
+     ]
+    }
+   },
+   "contrast_correct_at_follow_up_among_pre_known_error": {
+    "training": {
+     "k": 37,
+     "n": 130,
+     "share": 0.2846153846153846,
+     "ci95": [
+      0.2089621818620924,
+      0.37035616766304214
+     ]
+    },
+    "control": {
+     "k": 4,
+     "n": 27,
+     "share": 0.14814814814814814,
+     "ci95": [
+      0.04188739647376728,
+      0.3373108640242444
+     ]
+    },
+    "training_minus_control_newcombe": {
+     "diff": 0.13646723646723646,
+     "ci95": [
+      -0.05372565327285994,
+      0.258071503366681
+     ]
+    },
+    "fisher_exact_two_sided_p (the one p-value)": 0.22716448154141572
+   },
+   "control_same_label_at_follow_up": {
+    "k": 6,
+    "n": 27,
+    "share": 0.2222222222222222,
+    "ci95": [
+     0.08621693994756671,
+     0.42258306004437896
+    ]
+   },
+   "left_out_no_follow_up_d1": {
+    "training (groups 1-4 pooled)": 0,
+    "control (group 5)": 0
+   }
+  }
+ },
+ "analysis_4_collision_prediction": {
+  "law": {
+   "students_with_d1_d2_d3": 255,
+   "share_correct_d1": {
+    "k": 22,
+    "n": 255,
+    "share": 0.08627450980392157,
+    "ci95": [
+     0.05485800100963147,
+     0.12770700869046053
+    ]
+   },
+   "share_correct_d2": {
+    "k": 5,
+    "n": 255,
+    "share": 0.0196078431372549,
+    "ci95": [
+     0.00639652421422729,
+     0.045162428703176584
+    ]
+   },
+   "share_correct_d3": {
+    "k": 10,
+    "n": 255,
+    "share": 0.0392156862745098,
+    "ci95": [
+     0.01896297261364727,
+     0.07093477508768539
+    ]
+   },
+   "share_correct_d2_d3_mean": 0.029411764705882353,
+   "gap_d1_minus_mean_d2_d3": 0.056862745098039215,
+   "gap_d1_minus_d2": 0.06666666666666667,
+   "gap_d1_minus_d3": 0.047058823529411764,
+   "gap_ci95_bootstrap": [
+    0.027450980392156862,
+    0.09019607843137255
+   ]
+  },
+  "medicine": {
+   "students_with_d1_d2_d3": 260,
+   "share_correct_d1": {
+    "k": 46,
+    "n": 260,
+    "share": 0.17692307692307693,
+    "ci95": [
+     0.1325378370352357,
+     0.2288443282079319
+    ]
+   },
+   "share_correct_d2": {
+    "k": 64,
+    "n": 260,
+    "share": 0.24615384615384617,
+    "ci95": [
+     0.19503325574790772,
+     0.3031622496781815
+    ]
+   },
+   "share_correct_d3": {
+    "k": 92,
+    "n": 260,
+    "share": 0.35384615384615387,
+    "ci95": [
+     0.2957667519064858,
+     0.4153006356939544
+    ]
+   },
+   "share_correct_d2_d3_mean": 0.3,
+   "gap_d1_minus_mean_d2_d3": -0.12307692307692306,
+   "gap_d1_minus_d2": -0.06923076923076923,
+   "gap_d1_minus_d3": -0.17692307692307693,
+   "gap_ci95_bootstrap": [
+    -0.16538461538461538,
+    -0.08269230769230768
+   ]
+  },
+  "pooled": {
+   "students_with_d1_d2_d3": 515,
+   "share_correct_d1": {
+    "k": 68,
+    "n": 515,
+    "share": 0.13203883495145632,
+    "ci95": [
+     0.10401202396967077,
+     0.16436793029341243
+    ]
+   },
+   "share_correct_d2": {
+    "k": 69,
+    "n": 515,
+    "share": 0.13398058252427184,
+    "ci95": [
+     0.10576179459625042,
+     0.16647788766865407
+    ]
+   },
+   "share_correct_d3": {
+    "k": 102,
+    "n": 515,
+    "share": 0.19805825242718447,
+    "ci95": [
+     0.16448312463495668,
+     0.23514222037761823
+    ]
+   },
+   "share_correct_d2_d3_mean": 0.16601941747572815,
+   "gap_d1_minus_mean_d2_d3": -0.03398058252427183,
+   "gap_d1_minus_d2": -0.001941747572815511,
+   "gap_d1_minus_d3": -0.06601941747572815
+  },
+  "difference_of_gaps_law_minus_medicine": {
+   "estimate": 0.17993966817496226,
+   "ci95_bootstrap": [
+    0.12941176470588237,
+    0.23367364253393663
+   ],
+   "prediction": "law gap > 0 and law gap > medicine gap (suggestive only: item difficulty can also explain it)",
+   "law_gap_positive": true,
+   "law_gap_larger": true
+  }
+ },
+ "analysis_5_pre_label_by_group": {
+  "law": {
+   "Pre d1": {
+    "double tree": {
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 4,
+     "PPV-Joint occurence": 6,
+     "PPV-Likelihood-substr.": 1,
+     "correct": 4,
+     "guessing": 35
+    },
+    "unit square": {
+     "PPV-Base-rate only": 1,
+     "PPV-Evidence only": 2,
+     "PPV-Fisherian": 7,
+     "PPV-Joint occurence": 6,
+     "PPV-Likelihood-substr.": 1,
+     "correct": 7,
+     "guessing": 27
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 5,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood-substr.": 2,
+     "correct": 2,
+     "guessing": 26
+    },
+    "school tree": {
+     "PPV-Base-rate only": 2,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 8,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 3,
+     "guessing": 28
+    },
+    "control": {
+     "PPV-Base-rate only": 4,
+     "PPV-Evidence only": 2,
+     "PPV-Fisherian": 3,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood-substr.": 2,
+     "correct": 6,
+     "guessing": 30
+    }
+   },
+   "Pre d1: Base-rate only + Joint occurence (combined)": {
+    "double tree": 6,
+    "unit square": 7,
+    "natural frequencies": 9,
+    "school tree": 6,
+    "control": 8
+   },
+   "Pre d1star": {
+    "double tree": {
+     "NPV-Base-rate only": 1,
+     "NPV-Evidence only": 1,
+     "NPV-Fisherian": 8,
+     "NPV-Joint occurence": 6,
+     "NPV-Likelihood-substr.": 1,
+     "correct": 4,
+     "guessing": 30
+    },
+    "unit square": {
+     "NPV-Base-rate only": 2,
+     "NPV-Evidence only": 3,
+     "NPV-Fisherian": 11,
+     "NPV-Joint occurence": 3,
+     "correct": 6,
+     "guessing": 26
+    },
+    "natural frequencies": {
+     "NPV-Base-rate only": 3,
+     "NPV-Evidence only": 5,
+     "NPV-Fisherian": 15,
+     "NPV-Joint occurence": 4,
+     "NPV-Likelihood-substr.": 1,
+     "correct": 2,
+     "guessing": 21
+    },
+    "school tree": {
+     "NPV-Base-rate only": 1,
+     "NPV-Evidence only": 1,
+     "NPV-Fisherian": 11,
+     "NPV-Joint occurence": 3,
+     "NPV-Likelihood-substr.": 2,
+     "correct": 1,
+     "guessing": 32
+    },
+    "control": {
+     "NPV-Base-rate only": 1,
+     "NPV-Evidence only": 2,
+     "NPV-Fisherian": 7,
+     "NPV-Joint occurence": 5,
+     "NPV-Likelihood-substr.": 1,
+     "correct": 3,
+     "guessing": 32
+    }
+   },
+   "Pre d1star: Base-rate only + Joint occurence (combined)": {
+    "double tree": 7,
+    "unit square": 5,
+    "natural frequencies": 7,
+    "school tree": 4,
+    "control": 6
+   },
+   "Pre d2": {
+    "double tree": {
+     "PPV-Base-rate only": 13,
+     "PPV-Fisherian": 11,
+     "PPV-Joint occurence": 8,
+     "correct": 1,
+     "guessing": 18
+    },
+    "unit square": {
+     "PPV-Base-rate only": 8,
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 8,
+     "correct": 3,
+     "guessing": 23
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 20,
+     "PPV-Fisherian": 5,
+     "PPV-Joint occurence": 7,
+     "guessing": 19
+    },
+    "school tree": {
+     "PPV-Base-rate only": 17,
+     "PPV-Fisherian": 10,
+     "PPV-Joint occurence": 6,
+     "guessing": 18
+    },
+    "control": {
+     "PPV-Base-rate only": 14,
+     "PPV-Fisherian": 4,
+     "PPV-Joint occurence": 12,
+     "correct": 1,
+     "guessing": 20
+    }
+   },
+   "Pre d2: Base-rate only + Joint occurence (combined)": {
+    "double tree": 21,
+    "unit square": 16,
+    "natural frequencies": 27,
+    "school tree": 23,
+    "control": 26
+   },
+   "Pre d3": {
+    "double tree": {
+     "PPV-Evidence only": 7,
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 6,
+     "PPV-Likelihood": 1,
+     "correct": 2,
+     "guessing": 26
+    },
+    "unit square": {
+     "PPV-Base-rate only": 1,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 2,
+     "PPV-Likelihood-substr.": 1,
+     "correct": 4,
+     "guessing": 31
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 2,
+     "PPV-Evidence only": 4,
+     "PPV-Fisherian": 5,
+     "PPV-Joint occurence": 3,
+     "PPV-Likelihood-substr.": 3,
+     "guessing": 34
+    },
+    "school tree": {
+     "PPV-Base-rate only": 2,
+     "PPV-Evidence only": 7,
+     "PPV-Fisherian": 6,
+     "PPV-Joint occurence": 2,
+     "guessing": 34
+    },
+    "control": {
+     "PPV-Evidence only": 7,
+     "PPV-Fisherian": 7,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood": 1,
+     "PPV-Pre-Bayes": 1,
+     "correct": 4,
+     "guessing": 27
+    }
+   },
+   "Pre d3: Base-rate only + Joint occurence (combined)": {
+    "double tree": 6,
+    "unit square": 3,
+    "natural frequencies": 5,
+    "school tree": 4,
+    "control": 4
+   }
+  },
+  "medicine": {
+   "Pre d1": {
+    "double tree": {
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 1,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 6,
+     "guessing": 32
+    },
+    "unit square": {
+     "PPV-Base-rate only": 2,
+     "PPV-Fisherian": 12,
+     "PPV-Joint occurence": 2,
+     "PPV-Pre-Bayes": 1,
+     "correct": 11,
+     "guessing": 24
+    },
+    "natural frequencies": {
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 9,
+     "PPV-Likelihood-substr.": 3,
+     "PPV-Pre-Bayes": 1,
+     "correct": 11,
+     "guessing": 27
+    },
+    "school tree": {
+     "PPV-Base-rate only": 1,
+     "PPV-Fisherian": 9,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 12,
+     "guessing": 27
+    },
+    "control": {
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 8,
+     "PPV-Joint occurence": 2,
+     "PPV-Likelihood-substr.": 1,
+     "correct": 6,
+     "guessing": 34
+    }
+   },
+   "Pre d1: Base-rate only + Joint occurence (combined)": {
+    "double tree": 1,
+    "unit square": 4,
+    "natural frequencies": 0,
+    "school tree": 1,
+    "control": 2
+   },
+   "Pre d1star": {
+    "double tree": {
+     "NPV-Evidence only": 1,
+     "NPV-Fisherian": 12,
+     "NPV-Joint occurence": 1,
+     "correct": 9,
+     "guessing": 29
+    },
+    "unit square": {
+     "NPV-Fisherian": 10,
+     "NPV-Joint occurence": 3,
+     "correct": 13,
+     "guessing": 26
+    },
+    "natural frequencies": {
+     "NPV-Fisherian": 12,
+     "NPV-Joint occurence": 2,
+     "NPV-Likelihood-substr.": 2,
+     "correct": 13,
+     "guessing": 23
+    },
+    "school tree": {
+     "NPV-Base-rate only": 1,
+     "NPV-Fisherian": 12,
+     "NPV-Joint occurence": 3,
+     "NPV-Likelihood-substr.": 1,
+     "correct": 8,
+     "guessing": 27
+    },
+    "control": {
+     "NPV-Base-rate only": 1,
+     "NPV-Fisherian": 11,
+     "NPV-Joint occurence": 2,
+     "correct": 5,
+     "guessing": 33
+    }
+   },
+   "Pre d1star: Base-rate only + Joint occurence (combined)": {
+    "double tree": 1,
+    "unit square": 3,
+    "natural frequencies": 2,
+    "school tree": 4,
+    "control": 3
+   },
+   "Pre d2": {
+    "double tree": {
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 11,
+     "PPV-Joint occurence": 1,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 11,
+     "guessing": 23
+    },
+    "unit square": {
+     "PPV-Fisherian": 7,
+     "PPV-Joint occurence": 5,
+     "PPV-Likelihood": 1,
+     "correct": 11,
+     "guessing": 28
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 1,
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 7,
+     "PPV-Joint occurence": 2,
+     "PPV-Likelihood-substr.": 1,
+     "correct": 16,
+     "guessing": 24
+    },
+    "school tree": {
+     "PPV-Base-rate only": 3,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 2,
+     "PPV-Joint occurence": 6,
+     "PPV-Likelihood": 1,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 15,
+     "guessing": 19
+    },
+    "control": {
+     "PPV-Base-rate only": 1,
+     "PPV-Fisherian": 5,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood": 1,
+     "PPV-Likelihood-substr.": 2,
+     "correct": 11,
+     "guessing": 28
+    }
+   },
+   "Pre d2: Base-rate only + Joint occurence (combined)": {
+    "double tree": 1,
+    "unit square": 5,
+    "natural frequencies": 3,
+    "school tree": 9,
+    "control": 5
+   },
+   "Pre d3": {
+    "double tree": {
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 6,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 15,
+     "guessing": 26
+    },
+    "unit square": {
+     "PPV-Fisherian": 3,
+     "PPV-Joint occurence": 3,
+     "PPV-Likelihood-substr.": 4,
+     "PPV-Pre-Bayes": 2,
+     "correct": 22,
+     "guessing": 18
+    },
+    "natural frequencies": {
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 7,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 20,
+     "guessing": 20
+    },
+    "school tree": {
+     "PPV-Evidence only": 2,
+     "PPV-Fisherian": 5,
+     "PPV-Joint occurence": 1,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 18,
+     "guessing": 22
+    },
+    "control": {
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 1,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 17,
+     "guessing": 21
+    }
+   },
+   "Pre d3: Base-rate only + Joint occurence (combined)": {
+    "double tree": 0,
+    "unit square": 3,
+    "natural frequencies": 0,
+    "school tree": 1,
+    "control": 1
+   }
+  },
+  "pooled": {
+   "Pre d1": {
+    "double tree": {
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 13,
+     "PPV-Joint occurence": 7,
+     "PPV-Likelihood-substr.": 5,
+     "correct": 10,
+     "guessing": 67
+    },
+    "unit square": {
+     "PPV-Base-rate only": 3,
+     "PPV-Evidence only": 2,
+     "PPV-Fisherian": 19,
+     "PPV-Joint occurence": 8,
+     "PPV-Likelihood-substr.": 1,
+     "PPV-Pre-Bayes": 1,
+     "correct": 18,
+     "guessing": 51
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 5,
+     "PPV-Evidence only": 4,
+     "PPV-Fisherian": 18,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood-substr.": 5,
+     "PPV-Pre-Bayes": 1,
+     "correct": 13,
+     "guessing": 53
+    },
+    "school tree": {
+     "PPV-Base-rate only": 3,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 17,
+     "PPV-Joint occurence": 4,
+     "PPV-Likelihood-substr.": 6,
+     "correct": 15,
+     "guessing": 55
+    },
+    "control": {
+     "PPV-Base-rate only": 4,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 11,
+     "PPV-Joint occurence": 6,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 12,
+     "guessing": 64
+    }
+   },
+   "Pre d1: Base-rate only + Joint occurence (combined)": {
+    "double tree": 7,
+    "unit square": 11,
+    "natural frequencies": 9,
+    "school tree": 7,
+    "control": 10
+   },
+   "Pre d1star": {
+    "double tree": {
+     "NPV-Base-rate only": 1,
+     "NPV-Evidence only": 2,
+     "NPV-Fisherian": 20,
+     "NPV-Joint occurence": 7,
+     "NPV-Likelihood-substr.": 1,
+     "correct": 13,
+     "guessing": 59
+    },
+    "unit square": {
+     "NPV-Base-rate only": 2,
+     "NPV-Evidence only": 3,
+     "NPV-Fisherian": 21,
+     "NPV-Joint occurence": 6,
+     "correct": 19,
+     "guessing": 52
+    },
+    "natural frequencies": {
+     "NPV-Base-rate only": 3,
+     "NPV-Evidence only": 5,
+     "NPV-Fisherian": 27,
+     "NPV-Joint occurence": 6,
+     "NPV-Likelihood-substr.": 3,
+     "correct": 15,
+     "guessing": 44
+    },
+    "school tree": {
+     "NPV-Base-rate only": 2,
+     "NPV-Evidence only": 1,
+     "NPV-Fisherian": 23,
+     "NPV-Joint occurence": 6,
+     "NPV-Likelihood-substr.": 3,
+     "correct": 9,
+     "guessing": 59
+    },
+    "control": {
+     "NPV-Base-rate only": 2,
+     "NPV-Evidence only": 2,
+     "NPV-Fisherian": 18,
+     "NPV-Joint occurence": 7,
+     "NPV-Likelihood-substr.": 1,
+     "correct": 8,
+     "guessing": 65
+    }
+   },
+   "Pre d1star: Base-rate only + Joint occurence (combined)": {
+    "double tree": 8,
+    "unit square": 8,
+    "natural frequencies": 9,
+    "school tree": 8,
+    "control": 9
+   },
+   "Pre d2": {
+    "double tree": {
+     "PPV-Base-rate only": 13,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 22,
+     "PPV-Joint occurence": 9,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 12,
+     "guessing": 41
+    },
+    "unit square": {
+     "PPV-Base-rate only": 8,
+     "PPV-Fisherian": 16,
+     "PPV-Joint occurence": 13,
+     "PPV-Likelihood": 1,
+     "correct": 14,
+     "guessing": 51
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 21,
+     "PPV-Evidence only": 1,
+     "PPV-Fisherian": 12,
+     "PPV-Joint occurence": 9,
+     "PPV-Likelihood-substr.": 1,
+     "correct": 16,
+     "guessing": 43
+    },
+    "school tree": {
+     "PPV-Base-rate only": 20,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 12,
+     "PPV-Joint occurence": 12,
+     "PPV-Likelihood": 1,
+     "PPV-Likelihood-substr.": 3,
+     "correct": 15,
+     "guessing": 37
+    },
+    "control": {
+     "PPV-Base-rate only": 15,
+     "PPV-Fisherian": 9,
+     "PPV-Joint occurence": 16,
+     "PPV-Likelihood": 1,
+     "PPV-Likelihood-substr.": 2,
+     "correct": 12,
+     "guessing": 48
+    }
+   },
+   "Pre d2: Base-rate only + Joint occurence (combined)": {
+    "double tree": 22,
+    "unit square": 21,
+    "natural frequencies": 30,
+    "school tree": 32,
+    "control": 31
+   },
+   "Pre d3": {
+    "double tree": {
+     "PPV-Evidence only": 8,
+     "PPV-Fisherian": 15,
+     "PPV-Joint occurence": 6,
+     "PPV-Likelihood": 1,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 17,
+     "guessing": 52
+    },
+    "unit square": {
+     "PPV-Base-rate only": 1,
+     "PPV-Evidence only": 3,
+     "PPV-Fisherian": 12,
+     "PPV-Joint occurence": 5,
+     "PPV-Likelihood-substr.": 5,
+     "PPV-Pre-Bayes": 2,
+     "correct": 26,
+     "guessing": 49
+    },
+    "natural frequencies": {
+     "PPV-Base-rate only": 2,
+     "PPV-Evidence only": 5,
+     "PPV-Fisherian": 12,
+     "PPV-Joint occurence": 3,
+     "PPV-Likelihood-substr.": 7,
+     "correct": 20,
+     "guessing": 54
+    },
+    "school tree": {
+     "PPV-Base-rate only": 2,
+     "PPV-Evidence only": 9,
+     "PPV-Fisherian": 11,
+     "PPV-Joint occurence": 3,
+     "PPV-Likelihood-substr.": 4,
+     "correct": 18,
+     "guessing": 56
+    },
+    "control": {
+     "PPV-Evidence only": 7,
+     "PPV-Fisherian": 16,
+     "PPV-Joint occurence": 5,
+     "PPV-Likelihood": 1,
+     "PPV-Likelihood-substr.": 4,
+     "PPV-Pre-Bayes": 1,
+     "correct": 21,
+     "guessing": 48
+    }
+   },
+   "Pre d3: Base-rate only + Joint occurence (combined)": {
+    "double tree": 6,
+    "unit square": 6,
+    "natural frequencies": 5,
+    "school tree": 5,
+    "control": 5
+   }
+  }
+ }
+}
