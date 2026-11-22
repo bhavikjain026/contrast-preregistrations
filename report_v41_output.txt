@@ -1,0 +1,89 @@
+Plan v41 - one-number fixes for chatbot-written number sets (report v23) - ARITHMETIC ONLY, NO LEARNERS
+extract_final.csv bbeea3ea18d34e7020c42ead5d343527c235873958204461deb180d79a08787a
+v20.py c71003c8602d912409bc5ea07941d8e93796716c6f607470b8c5436c84232db3
+v22.py 4a9a8740f40623c96df080bed40561df02c2944257f36d4ee5a9042b1f14a3b5
+v23.py f31694bb53e4dc56c558e44ffe409641e5efe7d3aaa9d174ff767d171946aec5
+src/bayes_strategies.py 4d43af92ecb0e3bf8f74be1a213340010d92372762337f22a425817c3ac6b96e
+src/topic_engine.py 3072e0419b3dafc1a31a86d784e3b770d89018d940493c97708cb9b9bc1b492a
+python 3.14.7
+
+== ChatGPT, Arm 1
+distinct number sets D = 20; Q1 = 18; Q3 = 1; legacy v20 'M1 or M2' = 18; sets where v22's check disagrees with v23's legacy check = 0
+PRIMARY: with a collision (Q1 or Q3): 18; fixable by changing one number: 10 of 18; not fixable that way within 40 points: 8
+  smallest fix of at most  1 point(s): 0 of 18
+  smallest fix of at most  2 point(s): 0 of 18
+  smallest fix of at most  3 point(s): 0 of 18
+  smallest fix of at most  5 point(s): 0 of 18
+  smallest fix of at most 10 point(s): 2 of 18
+  smallest fix of at most 20 point(s): 7 of 18
+  smallest fix of at most 40 point(s): 10 of 18
+  smallest fix: median 19.5 points, largest 36 points
+  which number gives a smallest fix (ties counted for each): {'false-alarm rate': 2, 'hit rate': 8}
+  change in the correct answer at the first smallest fix: median 5.73 points, largest 10.50 points
+SECONDARY (plan v22's check and search, unchanged): with a collision 18; fixable 13; smallest fix median 17, largest 36 points
+== Gemini, Arm 1
+distinct number sets D = 20; Q1 = 20; Q3 = 3; legacy v20 'M1 or M2' = 20; sets where v22's check disagrees with v23's legacy check = 0
+PRIMARY: with a collision (Q1 or Q3): 20; fixable by changing one number: 7 of 20; not fixable that way within 40 points: 13
+  smallest fix of at most  1 point(s): 0 of 20
+  smallest fix of at most  2 point(s): 0 of 20
+  smallest fix of at most  3 point(s): 0 of 20
+  smallest fix of at most  5 point(s): 0 of 20
+  smallest fix of at most 10 point(s): 1 of 20
+  smallest fix of at most 20 point(s): 4 of 20
+  smallest fix of at most 40 point(s): 7 of 20
+  smallest fix: median 12 points, largest 37 points
+  which number gives a smallest fix (ties counted for each): {'hit rate': 7}
+  change in the correct answer at the first smallest fix: median 3.80 points, largest 12.11 points
+SECONDARY (plan v22's check and search, unchanged): with a collision 20; fixable 11; smallest fix median 19, largest 40 points
+== Claude, Arm 1
+distinct number sets D = 19; Q1 = 16; Q3 = 2; legacy v20 'M1 or M2' = 15; sets where v22's check disagrees with v23's legacy check = 0
+PRIMARY: with a collision (Q1 or Q3): 16; fixable by changing one number: 8 of 16; not fixable that way within 40 points: 8
+  smallest fix of at most  1 point(s): 0 of 16
+  smallest fix of at most  2 point(s): 2 of 16
+  smallest fix of at most  3 point(s): 2 of 16
+  smallest fix of at most  5 point(s): 2 of 16
+  smallest fix of at most 10 point(s): 2 of 16
+  smallest fix of at most 20 point(s): 4 of 16
+  smallest fix of at most 40 point(s): 8 of 16
+  smallest fix: median 19 points, largest 34 points
+  which number gives a smallest fix (ties counted for each): {'base rate': 1, 'hit rate': 7}
+  change in the correct answer at the first smallest fix: median 6.09 points, largest 11.67 points
+SECONDARY (plan v22's check and search, unchanged): with a collision 15; fixable 7; smallest fix median 16, largest 27 points
+== ChatGPT, Arm 2
+distinct number sets D = 20; Q1 = 0; Q3 = 0; legacy v20 'M1 or M2' = 0; sets where v22's check disagrees with v23's legacy check = 0
+PRIMARY: with a collision (Q1 or Q3): 0; fixable by changing one number: 0 of 0; not fixable that way within 40 points: 0
+  smallest fix of at most  1 point(s): 0 of 0
+  smallest fix of at most  2 point(s): 0 of 0
+  smallest fix of at most  3 point(s): 0 of 0
+  smallest fix of at most  5 point(s): 0 of 0
+  smallest fix of at most 10 point(s): 0 of 0
+  smallest fix of at most 20 point(s): 0 of 0
+  smallest fix of at most 40 point(s): 0 of 0
+SECONDARY (plan v22's check and search, unchanged): with a collision 0; fixable 0
+== Gemini, Arm 2
+distinct number sets D = 20; Q1 = 0; Q3 = 0; legacy v20 'M1 or M2' = 0; sets where v22's check disagrees with v23's legacy check = 0
+PRIMARY: with a collision (Q1 or Q3): 0; fixable by changing one number: 0 of 0; not fixable that way within 40 points: 0
+  smallest fix of at most  1 point(s): 0 of 0
+  smallest fix of at most  2 point(s): 0 of 0
+  smallest fix of at most  3 point(s): 0 of 0
+  smallest fix of at most  5 point(s): 0 of 0
+  smallest fix of at most 10 point(s): 0 of 0
+  smallest fix of at most 20 point(s): 0 of 0
+  smallest fix of at most 40 point(s): 0 of 0
+SECONDARY (plan v22's check and search, unchanged): with a collision 0; fixable 0
+== Claude, Arm 2
+distinct number sets D = 20; Q1 = 0; Q3 = 0; legacy v20 'M1 or M2' = 0; sets where v22's check disagrees with v23's legacy check = 0
+PRIMARY: with a collision (Q1 or Q3): 0; fixable by changing one number: 0 of 0; not fixable that way within 40 points: 0
+  smallest fix of at most  1 point(s): 0 of 0
+  smallest fix of at most  2 point(s): 0 of 0
+  smallest fix of at most  3 point(s): 0 of 0
+  smallest fix of at most  5 point(s): 0 of 0
+  smallest fix of at most 10 point(s): 0 of 0
+  smallest fix of at most 20 point(s): 0 of 0
+  smallest fix of at most 40 point(s): 0 of 0
+SECONDARY (plan v22's check and search, unchanged): with a collision 0; fixable 0
+
+PRIMARY, Arm 1 (the plain request), summed over the three replies (one reply each; not a sample):
+  distinct number sets: 59; with a collision (Q1 or Q3): 54; fixable by changing one number: 25
+  smallest fix among the fixable: median 19 points, largest 37 points
+  at most 5 points: 2; at most 10 points: 5
