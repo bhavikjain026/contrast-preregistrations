@@ -1,0 +1,207 @@
+Plan v42 - fixes that keep the base rate and the exact answer - ARITHMETIC ONLY, NO LEARNERS
+extract_final.csv bbeea3ea18d34e7020c42ead5d343527c235873958204461deb180d79a08787a
+items_v20.csv 5f337517afcb5e94a3639b9c65d6b492642a34937ec9628f695b32559fdd1236
+v41.py 26738d145e856b1e37ac31015e474f9d52ff33b16cfd1630a8e21fa87a8081ae
+v20.py c71003c8602d912409bc5ea07941d8e93796716c6f607470b8c5436c84232db3
+v22.py 4a9a8740f40623c96df080bed40561df02c2944257f36d4ee5a9042b1f14a3b5
+v23.py f31694bb53e4dc56c558e44ffe409641e5efe7d3aaa9d174ff767d171946aec5
+src/bayes_strategies.py 4d43af92ecb0e3bf8f74be1a213340010d92372762337f22a425817c3ac6b96e
+src/topic_engine.py 3072e0419b3dafc1a31a86d784e3b770d89018d940493c97708cb9b9bc1b492a
+python 3.14.7
+
+== ChatGPT, Arm 1 (20 distinct sets)
+sets with a collision: 18; marked unfixable in advance by plan section 2 (union of predictions 1 to 4): 5 (prediction 1: 0, 2: 0, 3: 5, 4: 0; a set can meet several); marked for secondary B (predictions 3 or 4): 5
+exceptions: marked sets fixed in the primary or A: 0; sets marked for B fixed in B: 0
+PRIMARY (whole-percent rates, exact answer kept): with at least one candidate 7; fixed 6 of 18
+  not fixed and not marked in advance: no candidate at all 7; candidates exist but all collide 0
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 1
+  smallest fix of at most 20 point(s): 2
+  smallest fix of at most 40 point(s): 5
+  smallest fix: median 29.5 points, largest 42 points
+SECONDARY A (half-point rates, exact answer kept): with at least one candidate 18; fixed 10 of 18
+  not fixed and not marked in advance: no candidate at all 0; candidates exist but all collide 3
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 2
+  smallest fix of at most 20 point(s): 2
+  smallest fix of at most 40 point(s): 5
+  smallest fix: median 37 points, largest 47.5 points
+SECONDARY B (whole-percent rates, correct answer within 0.5 percentage points): with at least one candidate 18; fixed 11 of 18
+  not fixed and not marked in advance (B: not predictions 3 or 4): no candidate at all 0; candidates exist but all collide 2
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 2
+  smallest fix of at most 20 point(s): 4
+  smallest fix of at most 40 point(s): 10
+  smallest fix: median 24 points, largest 41 points
+  change in the correct answer at the smallest fix: median 0.299, largest 0.484 points
+== Gemini, Arm 1 (20 distinct sets)
+sets with a collision: 20; marked unfixable in advance by plan section 2 (union of predictions 1 to 4): 7 (prediction 1: 1, 2: 0, 3: 6, 4: 0; a set can meet several); marked for secondary B (predictions 3 or 4): 6
+exceptions: marked sets fixed in the primary or A: 0; sets marked for B fixed in B: 0
+PRIMARY (whole-percent rates, exact answer kept): with at least one candidate 11; fixed 6 of 20
+  not fixed and not marked in advance: no candidate at all 4; candidates exist but all collide 3
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 0
+  smallest fix of at most 20 point(s): 3
+  smallest fix of at most 40 point(s): 5
+  smallest fix: median 19 points, largest 44 points
+SECONDARY A (half-point rates, exact answer kept): with at least one candidate 20; fixed 6 of 20
+  not fixed and not marked in advance: no candidate at all 0; candidates exist but all collide 7
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 1
+  smallest fix of at most 20 point(s): 4
+  smallest fix of at most 40 point(s): 6
+  smallest fix: median 17 points, largest 36 points
+SECONDARY B (whole-percent rates, correct answer within 0.5 percentage points): with at least one candidate 20; fixed 6 of 20
+  not fixed and not marked in advance (B: not predictions 3 or 4): no candidate at all 0; candidates exist but all collide 8
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 1
+  smallest fix of at most 20 point(s): 4
+  smallest fix of at most 40 point(s): 6
+  smallest fix: median 18 points, largest 35 points
+  change in the correct answer at the smallest fix: median 0.346, largest 0.449 points
+== Claude, Arm 1 (19 distinct sets)
+sets with a collision: 16; marked unfixable in advance by plan section 2 (union of predictions 1 to 4): 7 (prediction 1: 1, 2: 0, 3: 6, 4: 0; a set can meet several); marked for secondary B (predictions 3 or 4): 6
+exceptions: marked sets fixed in the primary or A: 0; sets marked for B fixed in B: 0
+PRIMARY (whole-percent rates, exact answer kept): with at least one candidate 11; fixed 5 of 16
+  not fixed and not marked in advance: no candidate at all 1; candidates exist but all collide 3
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 0
+  smallest fix of at most 20 point(s): 1
+  smallest fix of at most 40 point(s): 4
+  smallest fix: median 26 points, largest 46 points
+SECONDARY A (half-point rates, exact answer kept): with at least one candidate 15; fixed 7 of 16
+  not fixed and not marked in advance: no candidate at all 0; candidates exist but all collide 2
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 0
+  smallest fix of at most 20 point(s): 3
+  smallest fix of at most 40 point(s): 6
+  smallest fix: median 22.5 points, largest 49.5 points
+SECONDARY B (whole-percent rates, correct answer within 0.5 percentage points): with at least one candidate 15; fixed 6 of 16
+  not fixed and not marked in advance (B: not predictions 3 or 4): no candidate at all 0; candidates exist but all collide 4
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 1
+  smallest fix of at most 10 point(s): 1
+  smallest fix of at most 20 point(s): 4
+  smallest fix of at most 40 point(s): 6
+  smallest fix: median 17.5 points, largest 34 points
+  change in the correct answer at the smallest fix: median 0.278, largest 0.412 points
+
+ARM 1 SUMMED over the three replies (one reply each; not a sample): 59 distinct sets
+== Arm 1, all three chatbots
+sets with a collision: 54; marked unfixable in advance by plan section 2 (union of predictions 1 to 4): 19 (prediction 1: 2, 2: 0, 3: 17, 4: 0; a set can meet several); marked for secondary B (predictions 3 or 4): 17
+exceptions: marked sets fixed in the primary or A: 0; sets marked for B fixed in B: 0
+PRIMARY (whole-percent rates, exact answer kept): with at least one candidate 29; fixed 17 of 54
+  not fixed and not marked in advance: no candidate at all 12; candidates exist but all collide 6
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 1
+  smallest fix of at most 20 point(s): 6
+  smallest fix of at most 40 point(s): 14
+  smallest fix: median 26 points, largest 46 points
+SECONDARY A (half-point rates, exact answer kept): with at least one candidate 53; fixed 23 of 54
+  not fixed and not marked in advance: no candidate at all 0; candidates exist but all collide 12
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 3
+  smallest fix of at most 20 point(s): 9
+  smallest fix of at most 40 point(s): 17
+  smallest fix: median 22.5 points, largest 49.5 points
+SECONDARY B (whole-percent rates, correct answer within 0.5 percentage points): with at least one candidate 53; fixed 23 of 54
+  not fixed and not marked in advance (B: not predictions 3 or 4): no candidate at all 0; candidates exist but all collide 14
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 1
+  smallest fix of at most 10 point(s): 4
+  smallest fix of at most 20 point(s): 12
+  smallest fix of at most 40 point(s): 22
+  smallest fix: median 20 points, largest 41 points
+  change in the correct answer at the smallest fix: median 0.330, largest 0.484 points
+Beside it, from report v41 and not recomputed: one-number fixes 25 of 54, median 19 points.
+
+== SECONDARY C: published problems of plan v20 (23 distinct sets; 22 searched, 1 left out under addendum v42.1)
+sets with a collision: 20; marked unfixable in advance by plan section 2 (union of predictions 1 to 4): 13 (prediction 1: 1, 2: 0, 3: 13, 4: 0; a set can meet several); marked for secondary B (predictions 3 or 4): 13
+exceptions: marked sets fixed in the primary or A: 0; sets marked for B fixed in B: 0
+PRIMARY (whole-percent rates, exact answer kept): with at least one candidate 12; fixed 6 of 20
+  not fixed and not marked in advance: no candidate at all 0; candidates exist but all collide 1
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 0
+  smallest fix of at most 10 point(s): 3
+  smallest fix of at most 20 point(s): 5
+  smallest fix of at most 40 point(s): 5
+  smallest fix: median 10.5 points, largest 63 points
+SECONDARY A (half-point rates, exact answer kept): with at least one candidate 13; fixed 6 of 20
+  not fixed and not marked in advance: no candidate at all 0; candidates exist but all collide 1
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 2
+  smallest fix of at most 10 point(s): 4
+  smallest fix of at most 20 point(s): 5
+  smallest fix of at most 40 point(s): 5
+  smallest fix: median 8.75 points, largest 58.5 points
+SECONDARY B (whole-percent rates, correct answer within 0.5 percentage points): with at least one candidate 17; fixed 7 of 20
+  not fixed and not marked in advance (B: not predictions 3 or 4): no candidate at all 0; candidates exist but all collide 0
+  smallest fix of at most  1 point(s): 0
+  smallest fix of at most  2 point(s): 0
+  smallest fix of at most  3 point(s): 0
+  smallest fix of at most  5 point(s): 3
+  smallest fix of at most 10 point(s): 6
+  smallest fix of at most 20 point(s): 6
+  smallest fix of at most 40 point(s): 6
+  smallest fix: median 7 points, largest 57 points
+  change in the correct answer at the smallest fix: median 0.135, largest 0.500 points
+  left out (hit rate not above false-alarm rate): 5 / 0.4 / 2.10526, S1 Gigerenzer & Hoffrage 1995, Table 2: Active feminist / Bank teller; collision under v41's measure: True
+Published sets with a collision (b / h / f in points; primary smallest fix as new h' / f'):
+  1 / 80 / 9.69: marked unfixable True; no fix
+  1 / 80 / 9.59596: marked unfixable True; no fix
+  1 / 80 / 9.6: marked unfixable True; no fix
+  0.5 / 40 / 0.01: marked unfixable True; no fix
+  0.2 / 99 / 2: marked unfixable True; no fix
+  0.21 / 47.619 / 0.5: marked unfixable True; no fix
+  15 / 80 / 20: marked unfixable False; fix 68 / 17, size 12
+  2 / 95 / 0.510204: marked unfixable True; no fix
+  1 / 55 / 5.05051: marked unfixable True; no fix
+  3 / 90 / 40: marked unfixable False; fix 27 / 12, size 63
+  0.024 / 15 / 12: marked unfixable True; no fix
+  80 / 75 / 25: marked unfixable False; fix 84 / 28, size 9
+  30 / 70 / 50: marked unfixable False; no fix
+  0.005 / 80 / 0.05: marked unfixable True; no fix
+  36 / 75 / 20: marked unfixable False; fix 60 / 16, size 15
+  1 / 80 / 10: marked unfixable True; no fix
+  10 / 80 / 10: marked unfixable False; fix 72 / 9, size 8
+  1 / 50 / 10: marked unfixable True; no fix
+  1 / 55 / 5: marked unfixable True; no fix
+  25 / 80 / 40: marked unfixable False; fix 74 / 37, size 6
